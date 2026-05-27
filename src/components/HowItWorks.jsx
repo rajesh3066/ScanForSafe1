@@ -6,69 +6,69 @@ import {
 } from "lucide-react";
 
 // Brand palette
-// soft-green / softGreen: #dcfce7
-// primary-brand / primaryBrand: #166534
-// heading-dark / headingDark: #064e3b
+// soft-green / softGreen: #e8f8eb
+// primary-brand / primaryBrand: #2ebd3a
+// heading-dark / headingDark: #0B2545
 // input-bg / inputBg: #f3f4f6
-// text-main / textMain: #1e293b
+// text-main / textMain: #11355e
 
 function QRCodeSVG() {
   return (
     <svg width="64" height="64" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="7" height="7" rx="1" fill="#064e3b"/>
+      <rect x="0" y="0" width="7" height="7" rx="1" fill="#0B2545"/>
       <rect x="1" y="1" width="5" height="5" rx="0.5" fill="white"/>
-      <rect x="2" y="2" width="3" height="3" fill="#064e3b"/>
-      <rect x="14" y="0" width="7" height="7" rx="1" fill="#064e3b"/>
+      <rect x="2" y="2" width="3" height="3" fill="#0B2545"/>
+      <rect x="14" y="0" width="7" height="7" rx="1" fill="#0B2545"/>
       <rect x="15" y="1" width="5" height="5" rx="0.5" fill="white"/>
-      <rect x="16" y="2" width="3" height="3" fill="#064e3b"/>
-      <rect x="0" y="14" width="7" height="7" rx="1" fill="#064e3b"/>
+      <rect x="16" y="2" width="3" height="3" fill="#0B2545"/>
+      <rect x="0" y="14" width="7" height="7" rx="1" fill="#0B2545"/>
       <rect x="1" y="15" width="5" height="5" rx="0.5" fill="white"/>
-      <rect x="2" y="16" width="3" height="3" fill="#064e3b"/>
-      <rect x="8" y="0" width="1" height="1" fill="#064e3b"/>
-      <rect x="10" y="0" width="1" height="1" fill="#064e3b"/>
-      <rect x="12" y="0" width="1" height="1" fill="#064e3b"/>
-      <rect x="8" y="2" width="2" height="1" fill="#064e3b"/>
-      <rect x="11" y="2" width="1" height="1" fill="#064e3b"/>
-      <rect x="9" y="4" width="1" height="1" fill="#064e3b"/>
-      <rect x="11" y="4" width="2" height="1" fill="#064e3b"/>
-      <rect x="8" y="6" width="1" height="1" fill="#064e3b"/>
-      <rect x="10" y="6" width="2" height="1" fill="#064e3b"/>
-      <rect x="0" y="8" width="2" height="1" fill="#064e3b"/>
-      <rect x="3" y="8" width="1" height="1" fill="#064e3b"/>
-      <rect x="5" y="8" width="2" height="1" fill="#064e3b"/>
-      <rect x="8" y="8" width="1" height="2" fill="#064e3b"/>
-      <rect x="10" y="8" width="2" height="1" fill="#064e3b"/>
-      <rect x="13" y="8" width="1" height="1" fill="#064e3b"/>
-      <rect x="15" y="8" width="2" height="1" fill="#064e3b"/>
-      <rect x="18" y="8" width="1" height="2" fill="#064e3b"/>
-      <rect x="0" y="10" width="1" height="1" fill="#064e3b"/>
-      <rect x="2" y="10" width="2" height="1" fill="#064e3b"/>
-      <rect x="5" y="10" width="1" height="1" fill="#064e3b"/>
-      <rect x="9" y="10" width="1" height="1" fill="#064e3b"/>
-      <rect x="11" y="10" width="3" height="1" fill="#064e3b"/>
-      <rect x="15" y="10" width="1" height="1" fill="#064e3b"/>
-      <rect x="17" y="10" width="2" height="1" fill="#064e3b"/>
-      <rect x="0" y="12" width="3" height="1" fill="#064e3b"/>
-      <rect x="4" y="12" width="2" height="1" fill="#064e3b"/>
-      <rect x="8" y="12" width="2" height="1" fill="#064e3b"/>
-      <rect x="11" y="12" width="1" height="1" fill="#064e3b"/>
-      <rect x="13" y="12" width="2" height="1" fill="#064e3b"/>
-      <rect x="16" y="12" width="1" height="1" fill="#064e3b"/>
-      <rect x="18" y="12" width="1" height="1" fill="#064e3b"/>
-      <rect x="8" y="14" width="1" height="1" fill="#064e3b"/>
-      <rect x="10" y="14" width="2" height="1" fill="#064e3b"/>
-      <rect x="13" y="14" width="1" height="2" fill="#064e3b"/>
-      <rect x="15" y="14" width="1" height="1" fill="#064e3b"/>
-      <rect x="17" y="14" width="2" height="1" fill="#064e3b"/>
-      <rect x="8" y="16" width="2" height="1" fill="#064e3b"/>
-      <rect x="11" y="16" width="1" height="2" fill="#064e3b"/>
-      <rect x="14" y="16" width="1" height="1" fill="#064e3b"/>
-      <rect x="16" y="16" width="1" height="2" fill="#064e3b"/>
-      <rect x="18" y="16" width="2" height="1" fill="#064e3b"/>
-      <rect x="8" y="18" width="1" height="2" fill="#064e3b"/>
-      <rect x="10" y="18" width="1" height="2" fill="#064e3b"/>
-      <rect x="14" y="18" width="1" height="2" fill="#064e3b"/>
-      <rect x="19" y="18" width="1" height="2" fill="#064e3b"/>
+      <rect x="2" y="16" width="3" height="3" fill="#0B2545"/>
+      <rect x="8" y="0" width="1" height="1" fill="#0B2545"/>
+      <rect x="10" y="0" width="1" height="1" fill="#0B2545"/>
+      <rect x="12" y="0" width="1" height="1" fill="#0B2545"/>
+      <rect x="8" y="2" width="2" height="1" fill="#0B2545"/>
+      <rect x="11" y="2" width="1" height="1" fill="#0B2545"/>
+      <rect x="9" y="4" width="1" height="1" fill="#0B2545"/>
+      <rect x="11" y="4" width="2" height="1" fill="#0B2545"/>
+      <rect x="8" y="6" width="1" height="1" fill="#0B2545"/>
+      <rect x="10" y="6" width="2" height="1" fill="#0B2545"/>
+      <rect x="0" y="8" width="2" height="1" fill="#0B2545"/>
+      <rect x="3" y="8" width="1" height="1" fill="#0B2545"/>
+      <rect x="5" y="8" width="2" height="1" fill="#0B2545"/>
+      <rect x="8" y="8" width="1" height="2" fill="#0B2545"/>
+      <rect x="10" y="8" width="2" height="1" fill="#0B2545"/>
+      <rect x="13" y="8" width="1" height="1" fill="#0B2545"/>
+      <rect x="15" y="8" width="2" height="1" fill="#0B2545"/>
+      <rect x="18" y="8" width="1" height="2" fill="#0B2545"/>
+      <rect x="0" y="10" width="1" height="1" fill="#0B2545"/>
+      <rect x="2" y="10" width="2" height="1" fill="#0B2545"/>
+      <rect x="5" y="10" width="1" height="1" fill="#0B2545"/>
+      <rect x="9" y="10" width="1" height="1" fill="#0B2545"/>
+      <rect x="11" y="10" width="3" height="1" fill="#0B2545"/>
+      <rect x="15" y="10" width="1" height="1" fill="#0B2545"/>
+      <rect x="17" y="10" width="2" height="1" fill="#0B2545"/>
+      <rect x="0" y="12" width="3" height="1" fill="#0B2545"/>
+      <rect x="4" y="12" width="2" height="1" fill="#0B2545"/>
+      <rect x="8" y="12" width="2" height="1" fill="#0B2545"/>
+      <rect x="11" y="12" width="1" height="1" fill="#0B2545"/>
+      <rect x="13" y="12" width="2" height="1" fill="#0B2545"/>
+      <rect x="16" y="12" width="1" height="1" fill="#0B2545"/>
+      <rect x="18" y="12" width="1" height="1" fill="#0B2545"/>
+      <rect x="8" y="14" width="1" height="1" fill="#0B2545"/>
+      <rect x="10" y="14" width="2" height="1" fill="#0B2545"/>
+      <rect x="13" y="14" width="1" height="2" fill="#0B2545"/>
+      <rect x="15" y="14" width="1" height="1" fill="#0B2545"/>
+      <rect x="17" y="14" width="2" height="1" fill="#0B2545"/>
+      <rect x="8" y="16" width="2" height="1" fill="#0B2545"/>
+      <rect x="11" y="16" width="1" height="2" fill="#0B2545"/>
+      <rect x="14" y="16" width="1" height="1" fill="#0B2545"/>
+      <rect x="16" y="16" width="1" height="2" fill="#0B2545"/>
+      <rect x="18" y="16" width="2" height="1" fill="#0B2545"/>
+      <rect x="8" y="18" width="1" height="2" fill="#0B2545"/>
+      <rect x="10" y="18" width="1" height="2" fill="#0B2545"/>
+      <rect x="14" y="18" width="1" height="2" fill="#0B2545"/>
+      <rect x="19" y="18" width="1" height="2" fill="#0B2545"/>
     </svg>
   );
 }
@@ -79,7 +79,7 @@ function IPhoneMockup() {
       {/* Floating notification bubbles */}
       <div style={{
         position: "absolute", right: -50, top: "28%",
-        background: "#25D366", borderRadius: "50%",
+        background: "#2ebd3a", borderRadius: "50%",
         width: 44, height: 44,
         display: "flex", alignItems: "center", justifyContent: "center",
         boxShadow: "0 4px 16px rgba(37,211,102,0.4)",
@@ -95,7 +95,7 @@ function IPhoneMockup() {
         boxShadow: "0 4px 14px rgba(0,0,0,0.15)",
         zIndex: 10,
       }}>
-        <Bell size={18} color="#064e3b" />
+        <Bell size={18} color="#0B2545" />
       </div>
 
       <div style={{
@@ -138,14 +138,14 @@ function IPhoneMockup() {
               <div style={{ width: 18 }} />
             </div>
 
-            <div style={{ margin: "10px 12px 6px", background: "#dcfce7", borderRadius: 12, padding: "10px 12px", border: "1px solid #bbf7d0", display: "flex", alignItems: "center", gap: 10 }}>
+            <div style={{ margin: "10px 12px 6px", background: "#e8f8eb", borderRadius: 12, padding: "10px 12px", border: "1px solid #e8f8eb", display: "flex", alignItems: "center", gap: 10 }}>
               <div style={{ background: "white", borderRadius: 8, padding: 4, border: "1px solid #ddd", flexShrink: 0 }}>
                 <QRCodeSVG />
               </div>
               <div>
-                <div style={{ fontSize: 13, fontWeight: 800, color: "#064e3b", letterSpacing: "-0.3px" }}>PET-7G4K-2L8M</div>
-                <div style={{ fontSize: 10, color: "#166534", marginBottom: 4 }}>Pet ID Tag</div>
-                <div style={{ display: "inline-flex", alignItems: "center", gap: 3, background: "#166534", borderRadius: 4, padding: "2px 6px", fontSize: 9, fontWeight: 700, color: "white" }}>
+                <div style={{ fontSize: 13, fontWeight: 800, color: "#0B2545", letterSpacing: "-0.3px" }}>PET-7G4K-2L8M</div>
+                <div style={{ fontSize: 10, color: "#2ebd3a", marginBottom: 4 }}>Pet ID Tag</div>
+                <div style={{ display: "inline-flex", alignItems: "center", gap: 3, background: "#2ebd3a", borderRadius: 4, padding: "2px 6px", fontSize: 9, fontWeight: 700, color: "white" }}>
                   <CheckCircle size={8} color="white" fill="white"/>Verified
                 </div>
               </div>
@@ -154,8 +154,8 @@ function IPhoneMockup() {
             <div style={{ padding: "0 12px", flex: 1, display: "flex", flexDirection: "column", gap: 0 }}>
               <div style={{ display: "flex", alignItems: "flex-start", gap: 8, padding: "7px 0", borderBottom: "1px solid #f5f5f5" }}>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
-                  <div style={{ width: 26, height: 26, borderRadius: "50%", background: "#dcfce7", border: "1.5px solid #166534", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <Shield size={12} color="#064e3b" />
+                  <div style={{ width: 26, height: 26, borderRadius: "50%", background: "#e8f8eb", border: "1.5px solid #2ebd3a", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    <Shield size={12} color="#0B2545" />
                   </div>
                   <div style={{ width: 1.5, height: 28, background: "#e0e0e0" }} />
                 </div>
@@ -164,13 +164,13 @@ function IPhoneMockup() {
                   <div style={{ fontSize: 8.5, color: "#777" }}>Enter OTP sent to</div>
                   <div style={{ fontSize: 8.5, color: "#777" }}>+91 98765 43210</div>
                 </div>
-                <div style={{ background: "#f3f4f6", borderRadius: 6, padding: "4px 8px", fontSize: 13, fontWeight: 800, color: "#064e3b", letterSpacing: 1 }}>5321</div>
+                <div style={{ background: "#f3f4f6", borderRadius: 6, padding: "4px 8px", fontSize: 13, fontWeight: 800, color: "#0B2545", letterSpacing: 1 }}>5321</div>
               </div>
 
               <div style={{ display: "flex", alignItems: "flex-start", gap: 8, padding: "7px 0", borderBottom: "1px solid #f5f5f5" }}>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
-                  <div style={{ width: 26, height: 26, borderRadius: "50%", background: "#dcfce7", border: "1.5px solid #166534", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <Bell size={12} color="#064e3b" />
+                  <div style={{ width: 26, height: 26, borderRadius: "50%", background: "#e8f8eb", border: "1.5px solid #2ebd3a", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    <Bell size={12} color="#0B2545" />
                   </div>
                   <div style={{ width: 1.5, height: 28, background: "#e0e0e0" }} />
                 </div>
@@ -179,19 +179,19 @@ function IPhoneMockup() {
                   <div style={{ fontSize: 8.5, color: "#777" }}>WhatsApp alert sent</div>
                   <div style={{ fontSize: 8.5, color: "#777" }}>instantly</div>
                 </div>
-                <CheckCircle size={16} color="#166534" fill="#166534" style={{ flexShrink: 0, marginTop: 4 }} />
+                <CheckCircle size={16} color="#2ebd3a" fill="#2ebd3a" style={{ flexShrink: 0, marginTop: 4 }} />
               </div>
 
               <div style={{ display: "flex", alignItems: "flex-start", gap: 8, padding: "7px 0" }}>
-                <div style={{ width: 26, height: 26, borderRadius: "50%", background: "#dcfce7", border: "1.5px solid #166534", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <MapPin size={12} color="#064e3b" />
+                <div style={{ width: 26, height: 26, borderRadius: "50%", background: "#e8f8eb", border: "1.5px solid #2ebd3a", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <MapPin size={12} color="#0B2545" />
                 </div>
                 <div style={{ flex: 1 }}>
                   <div style={{ fontSize: 10, fontWeight: 700, color: "#111", marginBottom: 1 }}>Live Location</div>
                   <div style={{ fontSize: 8.5, color: "#777" }}>Sharing location</div>
                   <div style={{ fontSize: 8.5, color: "#777" }}>for safe return</div>
                 </div>
-                <div style={{ width: 42, height: 38, borderRadius: 6, background: "linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, overflow: "hidden", position: "relative", border: "1px solid #86efac" }}>
+                <div style={{ width: 42, height: 38, borderRadius: 6, background: "linear-gradient(135deg, #e8f8eb 0%, #e8f8eb 100%)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, overflow: "hidden", position: "relative", border: "1px solid #7ded88" }}>
                   <div style={{ position: "absolute", inset: 0 }}>
                     <div style={{ position: "absolute", left: "33%", top: 0, bottom: 0, width: 1, background: "rgba(255,255,255,0.5)" }} />
                     <div style={{ position: "absolute", left: "66%", top: 0, bottom: 0, width: 1, background: "rgba(255,255,255,0.5)" }} />
@@ -203,7 +203,7 @@ function IPhoneMockup() {
               </div>
             </div>
 
-            <div style={{ margin: "6px 10px 10px", background: "linear-gradient(135deg, #064e3b 0%, #166534 100%)", borderRadius: 14, padding: "12px 14px", display: "flex", alignItems: "center", gap: 10 }}>
+            <div style={{ margin: "6px 10px 10px", background: "linear-gradient(135deg, #0B2545 0%, #2ebd3a 100%)", borderRadius: 14, padding: "12px 14px", display: "flex", alignItems: "center", gap: 10 }}>
               <div style={{ width: 32, height: 32, borderRadius: "50%", background: "rgba(255,255,255,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <ShieldCheck size={18} color="white" />
               </div>
@@ -238,7 +238,7 @@ function StepCard({ number, icon: Icon, title, description, badge, badgeIcon: Ba
         transform: hovered ? "translateY(-4px)" : "translateY(0)",
         transition: "all 0.3s ease",
         // Dotted outline using border
-        border: hovered ? "2px dashed #166534" : "2px dashed #bbf7d0",
+        border: hovered ? "2px dashed #2ebd3a" : "2px dashed #e8f8eb",
         display: "flex", flexDirection: "column",
       }}
     >
@@ -246,7 +246,7 @@ function StepCard({ number, icon: Icon, title, description, badge, badgeIcon: Ba
       <div style={{
         position: "absolute", top: -16, left: "50%", transform: "translateX(-50%)",
         width: 34, height: 34, borderRadius: "50%",
-        background: "linear-gradient(135deg, #064e3b 0%, #166534 100%)",
+        background: "linear-gradient(135deg, #0B2545 0%, #2ebd3a 100%)",
         display: "flex", alignItems: "center", justifyContent: "center",
         fontSize: 15, fontWeight: 800, color: "white",
         boxShadow: "0 4px 12px rgba(6,78,59,0.35)",
@@ -256,22 +256,22 @@ function StepCard({ number, icon: Icon, title, description, badge, badgeIcon: Ba
       {/* Icon */}
       <div style={{
         width: 62, height: 62, borderRadius: "50%",
-        background: "linear-gradient(135deg, #dcfce7 0%, #f0fdf4 100%)",
+        background: "linear-gradient(135deg, #e8f8eb 0%, #f8fafc 100%)",
         display: "flex", alignItems: "center", justifyContent: "center",
         margin: "10px auto 16px",
-        border: "1.5px solid #86efac",
+        border: "1.5px solid #7ded88",
       }}>
-        <Icon size={26} color="#166534" strokeWidth={1.8} />
+        <Icon size={26} color="#2ebd3a" strokeWidth={1.8} />
       </div>
 
       <h3 style={{
-        fontSize: 16, fontWeight: 800, color: "#064e3b",
+        fontSize: 16, fontWeight: 800, color: "#0B2545",
         textAlign: "center", marginBottom: 10, lineHeight: 1.3,
         fontFamily: "Georgia, serif",
       }}>{title}</h3>
 
       <p style={{
-        fontSize: 12.5, color: "#1e293b", textAlign: "center",
+        fontSize: 12.5, color: "#11355e", textAlign: "center",
         lineHeight: 1.65, flex: 1, marginBottom: 14,
         opacity: 0.75,
       }}>{description}</p>
@@ -279,11 +279,11 @@ function StepCard({ number, icon: Icon, title, description, badge, badgeIcon: Ba
       {/* Badge */}
       <div style={{
         display: "flex", alignItems: "center", justifyContent: "center", gap: 5,
-        background: "#dcfce7", borderRadius: 20,
+        background: "#e8f8eb", borderRadius: 20,
         padding: "6px 12px",
-        fontSize: 11, fontWeight: 700, color: "#166534",
+        fontSize: 11, fontWeight: 700, color: "#2ebd3a",
       }}>
-        <BadgeIcon size={12} color="#166534" />
+        <BadgeIcon size={12} color="#2ebd3a" />
         {badge}
       </div>
     </div>
@@ -326,14 +326,14 @@ export default function HowItWorks() {
   return (
     <div style={{
       minHeight: "100vh",
-      background: "linear-gradient(160deg, #f0fdf4 0%, #fafcfa 50%, #f0fdf4 100%)",
+      background: "linear-gradient(160deg, #f8fafc 0%, #fafcfa 50%, #f8fafc 100%)",
       fontFamily: "'Segoe UI', system-ui, sans-serif",
       overflow: "hidden",
     }}>
       {/* Dot grid background */}
       <div style={{
         position: "fixed", inset: 0, pointerEvents: "none", zIndex: 0,
-        backgroundImage: "radial-gradient(circle, #86efac 1px, transparent 1px)",
+        backgroundImage: "radial-gradient(circle, #7ded88 1px, transparent 1px)",
         backgroundSize: "28px 28px",
         opacity: 0.35,
       }} />
@@ -355,12 +355,12 @@ export default function HowItWorks() {
             display: "inline-flex", alignItems: "center", gap: 7,
             background: "white",
             borderRadius: 40, padding: "7px 18px",
-            fontSize: 11, fontWeight: 700, color: "#166534",
+            fontSize: 11, fontWeight: 700, color: "#2ebd3a",
             letterSpacing: "0.08em", textTransform: "uppercase",
             boxShadow: "0 2px 10px rgba(0,0,0,0.08)",
-            border: "1px solid #86efac",
+            border: "1px solid #7ded88",
           }}>
-            <div style={{ width: 7, height: 7, borderRadius: "50%", background: "#166534", boxShadow: "0 0 0 3px rgba(22,101,52,0.2)" }} />
+            <div style={{ width: 7, height: 7, borderRadius: "50%", background: "#2ebd3a", boxShadow: "0 0 0 3px rgba(22,101,52,0.2)" }} />
             Simple Process
           </div>
         </div>
@@ -381,17 +381,17 @@ export default function HowItWorks() {
             <h1 style={{
               fontSize: "clamp(32px, 5vw, 52px)",
               fontWeight: 900,
-              color: "#064e3b",
+              color: "#0B2545",
               lineHeight: 1.15,
               marginBottom: 14,
               fontFamily: "Georgia, 'Times New Roman', serif",
             }}>
               Up and Running in<br />
-              <span style={{ color: "#166534" }}>3 Easy Steps</span>
+              <span style={{ color: "#2ebd3a" }}>3 Easy Steps</span>
             </h1>
 
             <p style={{
-              fontSize: 15, color: "#1e293b", marginBottom: 36,
+              fontSize: 15, color: "#11355e", marginBottom: 36,
               lineHeight: 1.6, maxWidth: 520, opacity: 0.7,
             }}>
               No complicated setup. No technical knowledge needed.<br />
@@ -407,7 +407,7 @@ export default function HowItWorks() {
                 left: "calc(33.33% - 8px)",
                 right: "calc(33.33% - 8px)",
                 height: 0,
-                borderTop: "2px dashed #86efac",
+                borderTop: "2px dashed #7ded88",
                 zIndex: 0,
                 pointerEvents: "none",
               }} />
@@ -425,23 +425,23 @@ export default function HowItWorks() {
               display: "flex", alignItems: "center", justifyContent: "space-between",
               gap: 16, flexWrap: "wrap",
               boxShadow: "0 4px 20px rgba(0,0,0,0.07)",
-              border: "1px solid #dcfce7",
+              border: "1px solid #e8f8eb",
             }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                 <div style={{
                   width: 40, height: 40, borderRadius: "50%",
-                  background: "#dcfce7",
+                  background: "#e8f8eb",
                   display: "flex", alignItems: "center", justifyContent: "center",
                 }}>
-                  <Shield size={20} color="#166534" />
+                  <Shield size={20} color="#2ebd3a" />
                 </div>
                 <div>
-                  <div style={{ fontSize: 14, fontWeight: 800, color: "#064e3b" }}>Peace of mind in 3 simple steps</div>
-                  <div style={{ fontSize: 11.5, color: "#1e293b", opacity: 0.6 }}>Join thousands of smart families who trust our QR protection.</div>
+                  <div style={{ fontSize: 14, fontWeight: 800, color: "#0B2545" }}>Peace of mind in 3 simple steps</div>
+                  <div style={{ fontSize: 11.5, color: "#11355e", opacity: 0.6 }}>Join thousands of smart families who trust our QR protection.</div>
                 </div>
               </div>
               <button style={{
-                background: "linear-gradient(135deg, #064e3b 0%, #166534 100%)",
+                background: "linear-gradient(135deg, #0B2545 0%, #2ebd3a 100%)",
                 color: "white", border: "none",
                 borderRadius: 12, padding: "13px 24px",
                 fontSize: 13.5, fontWeight: 700,
@@ -481,7 +481,7 @@ export default function HowItWorks() {
           display: "flex", alignItems: "center", justifyContent: "space-between",
           flexWrap: "wrap", gap: 12,
           boxShadow: "0 4px 20px rgba(0,0,0,0.07)",
-          border: "1px solid #dcfce7",
+          border: "1px solid #e8f8eb",
           opacity: visible ? 1 : 0,
           transform: visible ? "translateY(0)" : "translateY(16px)",
           transition: "all 0.6s ease 0.35s",
@@ -492,22 +492,22 @@ export default function HowItWorks() {
               flex: "1 1 140px",
               justifyContent: "center",
               padding: "4px 0",
-              borderRight: i < stats.length - 1 ? "1px solid #dcfce7" : "none",
+              borderRight: i < stats.length - 1 ? "1px solid #e8f8eb" : "none",
             }}>
               <div style={{
                 width: 34, height: 34, borderRadius: "50%",
-                background: "#dcfce7",
+                background: "#e8f8eb",
                 display: "flex", alignItems: "center", justifyContent: "center",
                 flexShrink: 0,
               }}>
                 {typeof s.icon === "function" && s.icon.toString().includes("span")
                   ? <s.icon />
-                  : <s.icon size={16} color="#166534" />
+                  : <s.icon size={16} color="#2ebd3a" />
                 }
               </div>
               <div>
-                <div style={{ fontSize: 10, color: "#1e293b", opacity: 0.6 }}>{s.label}</div>
-                <div style={{ fontSize: 12.5, fontWeight: 800, color: "#064e3b" }}>{s.value}</div>
+                <div style={{ fontSize: 10, color: "#11355e", opacity: 0.6 }}>{s.label}</div>
+                <div style={{ fontSize: 12.5, fontWeight: 800, color: "#0B2545" }}>{s.value}</div>
               </div>
             </div>
           ))}

@@ -4,13 +4,13 @@
 @tailwind utilities;
 
 :root {
-  --soft-green: #dcfce7;
-  --primary-brand: #166534;
-  --heading-dark: #064e3b;
+  --soft-green: #e8f8eb;
+  --primary-brand: #2ebd3a;
+  --heading-dark: #0B2545;
   --input-bg: #f3f4f6;
-  --text-main: #1e293b;
+  --text-main: #11355e;
   --white: #ffffff;
-  --green-light: #f0fdf4;
+  --green-light: #f8fafc;
 }
 
 * { box-sizing: border-box; }
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5 {
   100% { background-position: 200% 0; }
 }
 .shimmer {
-  background: linear-gradient(90deg, #f0fdf4 25%, #dcfce7 50%, #f0fdf4 75%);
+  background: linear-gradient(90deg, #f8fafc 25%, #e8f8eb 50%, #f8fafc 75%);
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
 }
@@ -85,5 +85,5 @@ h1, h2, h3, h4, h5 {
 
 /* scrollbar */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #f0fdf4; }
-::-webkit-scrollbar-thumb { background: #166534; border-radius: 3px; }
+::-webkit-scrollbar-track { background: #f8fafc; }
+::-webkit-scrollbar-thumb { background: #2ebd3a; border-radius: 3px; }

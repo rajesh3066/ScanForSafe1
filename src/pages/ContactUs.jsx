@@ -18,9 +18,9 @@ const CONTACT_INFO = [
     label: 'WhatsApp',
     value: 'Chat with us instantly',
     href: 'https://wa.me/91XXXXXXXXXX',
-    color: '#16a34a',
-    bg: 'linear-gradient(135deg,#f0fdf4,#dcfce7)',
-    border: '#bbf7d0',
+    color: '#2ebd3a',
+    bg: 'linear-gradient(135deg,#f8fafc,#e8f8eb)',
+    border: '#e8f8eb',
     emoji: '💬',
     desc: 'Fastest — reply under 10 min',
   },
@@ -30,7 +30,7 @@ const CONTACT_INFO = [
     value: 'hello@scanforsafe.in',
     href: 'mailto:hello@scanforsafe.in',
     color: '#7c3aed',
-    bg: 'linear-gradient(135deg,#f5f3ff,#ede9fe)',
+    bg: 'linear-gradient(135deg,#f8fafc,#ede9fe)',
     border: '#ddd6fe',
     emoji: '✉️',
     desc: 'Reply within 2 business hours',
@@ -230,7 +230,7 @@ export default function ContactUs() {
         .cf-input {
           width: 100%; border: 2px solid #e2e8f0; border-radius: 14px;
           padding: 13px 16px; font-size: 14px; font-weight: 500;
-          color: #0f172a; background: #f8fafc; outline: none;
+          color: #0B2545; background: #f8fafc; outline: none;
           font-family: 'Instrument Sans', sans-serif;
           transition: all .25s cubic-bezier(.4,0,.2,1);
           box-sizing: border-box;
@@ -300,7 +300,7 @@ export default function ContactUs() {
         {/* Animated orbs */}
         <div style={{
           position: 'absolute', width: 560, height: 560, borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(22,163,74,0.18) 0%, transparent 65%)',
+          background: 'radial-gradient(circle, rgba(46, 189, 58,0.18) 0%, transparent 65%)',
           top: -180, right: -120,
           animation: 'orbMove1 14s ease-in-out infinite',
           pointerEvents: 'none',
@@ -360,7 +360,7 @@ export default function ContactUs() {
           {/* Live badge */}
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: 9,
-            background: 'rgba(22,163,74,0.14)',
+            background: 'rgba(46, 189, 58,0.14)',
             border: '1.5px solid rgba(74,222,128,0.35)',
             borderRadius: 99, padding: '8px 20px', marginBottom: 28,
             opacity: heroVisible ? 1 : 0,
@@ -369,10 +369,10 @@ export default function ContactUs() {
             fontFamily: "'Fira Code', monospace",
           }}>
             <span style={{ position: 'relative', display: 'inline-block', width: 8, height: 8 }}>
-              <span style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#4ade80', animation: 'ripple 1.6s ease-out infinite' }} />
-              <span style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#4ade80' }} />
+              <span style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#4bd557', animation: 'ripple 1.6s ease-out infinite' }} />
+              <span style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#4bd557' }} />
             </span>
-            <span style={{ fontSize: 11, fontWeight: 500, color: '#86efac', letterSpacing: '.1em' }}>
+            <span style={{ fontSize: 11, fontWeight: 500, color: '#7ded88', letterSpacing: '.1em' }}>
               team.online • avg_reply &lt; 10min
             </span>
           </div>
@@ -390,7 +390,7 @@ export default function ContactUs() {
           }}>
             Talk to a<br />
             <span style={{
-              background: 'linear-gradient(90deg, #4ade80 0%, #86efac 50%, #4ade80 100%)',
+              background: 'linear-gradient(90deg, #4bd557 0%, #7ded88 50%, #4bd557 100%)',
               backgroundSize: '200% auto',
               WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
               animation: heroVisible ? 'glowPulse 3s ease-in-out infinite' : 'none',
@@ -464,7 +464,7 @@ export default function ContactUs() {
                 </span>
                 <h2 style={{
                   fontFamily: "'Bricolage Grotesque', sans-serif",
-                  fontSize: 26, fontWeight: 800, color: '#0f172a',
+                  fontSize: 26, fontWeight: 800, color: '#0B2545',
                   letterSpacing: '-0.03em', margin: '0 0 10px',
                 }}>
                   Reach Us<br />Your Way
@@ -510,15 +510,15 @@ export default function ContactUs() {
                       {href ? (
                         <a href={href} style={{
                           fontFamily: "'Instrument Sans', sans-serif",
-                          fontSize: 14, fontWeight: 700, color: '#0f172a',
+                          fontSize: 14, fontWeight: 700, color: '#0B2545',
                           textDecoration: 'none', display: 'block', marginBottom: 3,
                           transition: 'color .2s',
                         }}
                           onMouseEnter={e => e.target.style.color = color}
-                          onMouseLeave={e => e.target.style.color = '#0f172a'}
+                          onMouseLeave={e => e.target.style.color = '#0B2545'}
                         >{value}</a>
                       ) : (
-                        <div style={{ fontFamily: "'Instrument Sans', sans-serif", fontSize: 14, fontWeight: 700, color: '#0f172a', marginBottom: 3 }}>{value}</div>
+                        <div style={{ fontFamily: "'Instrument Sans', sans-serif", fontSize: 14, fontWeight: 700, color: '#0B2545', marginBottom: 3 }}>{value}</div>
                       )}
                       <div style={{ fontSize: 11.5, color: '#94a3b8', fontWeight: 400 }}>{desc}</div>
                     </div>
@@ -529,20 +529,20 @@ export default function ContactUs() {
               {/* Trust note */}
               <div style={{
                 marginTop: 18, padding: '14px 18px', borderRadius: 14,
-                background: 'linear-gradient(135deg,#f0fdf4,#dcfce7)',
-                border: '1.5px solid #bbf7d0',
+                background: 'linear-gradient(135deg,#f8fafc,#e8f8eb)',
+                border: '1.5px solid #e8f8eb',
                 display: 'flex', alignItems: 'center', gap: 10,
                 opacity: infoInView ? 1 : 0,
                 transform: infoInView ? 'translateY(0)' : 'translateY(12px)',
                 transition: 'opacity .5s ease .55s, transform .5s ease .55s',
               }}>
                 <div style={{ position: 'relative', flexShrink: 0 }}>
-                  <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#16a34a' }} />
-                  <div style={{ position: 'absolute', inset: -3, borderRadius: '50%', border: '1.5px solid rgba(22,163,74,0.3)', animation: 'ripple 2s ease-out infinite' }} />
+                  <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#2ebd3a' }} />
+                  <div style={{ position: 'absolute', inset: -3, borderRadius: '50%', border: '1.5px solid rgba(46, 189, 58,0.3)', animation: 'ripple 2s ease-out infinite' }} />
                 </div>
                 <span style={{
                   fontFamily: "'Instrument Sans', sans-serif",
-                  fontSize: 12.5, fontWeight: 600, color: '#15803d',
+                  fontSize: 12.5, fontWeight: 600, color: '#0B2545',
                 }}>
                   We always reply within 2 business hours — guaranteed.
                 </span>
@@ -566,17 +566,17 @@ export default function ContactUs() {
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '44px 0', textAlign: 'center' }}>
                   <div style={{
                     width: 88, height: 88, borderRadius: '50%',
-                    background: 'linear-gradient(135deg,#f0fdf4,#dcfce7)',
+                    background: 'linear-gradient(135deg,#f8fafc,#e8f8eb)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    marginBottom: 22, border: '2px solid #bbf7d0',
+                    marginBottom: 22, border: '2px solid #e8f8eb',
                     animation: 'checkPop .65s cubic-bezier(.34,1.3,.64,1) both',
-                    boxShadow: '0 0 0 8px rgba(22,163,74,0.08)',
+                    boxShadow: '0 0 0 8px rgba(46, 189, 58,0.08)',
                   }}>
-                    <CheckCircle style={{ width: 40, height: 40, color: '#16a34a' }} />
+                    <CheckCircle style={{ width: 40, height: 40, color: '#2ebd3a' }} />
                   </div>
                   <h3 style={{
                     fontFamily: "'Bricolage Grotesque', sans-serif",
-                    fontSize: 28, fontWeight: 800, color: '#0f172a',
+                    fontSize: 28, fontWeight: 800, color: '#0B2545',
                     letterSpacing: '-0.03em', marginBottom: 12,
                   }}>
                     Message Sent! 🎉
@@ -586,10 +586,10 @@ export default function ContactUs() {
                   </p>
                   <div style={{
                     marginTop: 24, padding: '12px 28px', borderRadius: 12,
-                    background: 'linear-gradient(135deg,#f0fdf4,#dcfce7)',
-                    border: '1.5px solid #bbf7d0',
+                    background: 'linear-gradient(135deg,#f8fafc,#e8f8eb)',
+                    border: '1.5px solid #e8f8eb',
                     fontFamily: "'Instrument Sans', sans-serif",
-                    fontSize: 13.5, fontWeight: 700, color: '#15803d',
+                    fontSize: 13.5, fontWeight: 700, color: '#0B2545',
                   }}>
                     Thanks, {form.name || 'friend'}! We'll be in touch 👋
                   </div>
@@ -612,7 +612,7 @@ export default function ContactUs() {
                     </div>
                     <h2 style={{
                       fontFamily: "'Bricolage Grotesque', sans-serif",
-                      fontSize: 25, fontWeight: 800, color: '#0f172a',
+                      fontSize: 25, fontWeight: 800, color: '#0B2545',
                       letterSpacing: '-0.03em', margin: 0,
                     }}>
                       We'd Love to Hear<br />From You
@@ -620,7 +620,7 @@ export default function ContactUs() {
                     {/* Animated underline */}
                     <div style={{
                       height: 3, borderRadius: 99, marginTop: 10,
-                      background: 'linear-gradient(90deg, #0057b8, #16a34a)',
+                      background: 'linear-gradient(90deg, #0057b8, #2ebd3a)',
                       animation: formInView ? 'lineGrow .8s cubic-bezier(.34,1.3,.64,1) .4s both' : 'none',
                     }} />
                   </div>

@@ -8,11 +8,11 @@ const USE_CASES = [
     qrSize: '3.5 cm QR Sticker',
     description:
       'Weather-proof 3.5cm QR sticker placed on the fuel tank or handlebar. If your bike is found, the finder scans and you get an instant alert with GPS location.',
-    cardBg: 'linear-gradient(135deg,#f0fdf4,#dcfce7)',
-    iconBg: '#166534',
+    cardBg: 'linear-gradient(135deg,#f8fafc,#e8f8eb)',
+    iconBg: '#2ebd3a',
     tag: 'QR Sticker',
-    tagBg: '#dcfce7',
-    tagColor: '#166534',
+    tagBg: '#e8f8eb',
+    tagColor: '#2ebd3a',
     image:
       'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=600&q=80',
     badge: '🏍️',
@@ -24,11 +24,11 @@ const USE_CASES = [
     qrSize: '3.5 cm QR Sticker',
     description:
       'Durable sticker or tag attached to your bag strap. Perfect for travel bags, school bags, and laptop bags. Works even in low-light.',
-    cardBg: 'linear-gradient(135deg,#ecfdf5,#a7f3d0)',
-    iconBg: '#064e3b',
+    cardBg: 'linear-gradient(135deg,#f8fafc,#a7f3d0)',
+    iconBg: '#0B2545',
     tag: 'QR Tag',
-    tagBg: '#bbf7d0',
-    tagColor: '#064e3b',
+    tagBg: '#e8f8eb',
+    tagColor: '#0B2545',
     image:
       'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80',
     badge: '🎒',
@@ -40,11 +40,11 @@ const USE_CASES = [
     qrSize: 'Collar QR Tag',
     description:
       "Attach a lightweight QR tag to your pet's collar. If they wander, anyone can scan it and you'll receive an instant notification with their location.",
-    cardBg: 'linear-gradient(135deg,#f0fdf4,#dcfce7)',
-    iconBg: '#166534',
+    cardBg: 'linear-gradient(135deg,#f8fafc,#e8f8eb)',
+    iconBg: '#2ebd3a',
     tag: 'Collar Tag',
-    tagBg: '#dcfce7',
-    tagColor: '#166534',
+    tagBg: '#e8f8eb',
+    tagColor: '#2ebd3a',
     image:
       'https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=600&q=80',
     badge: '🐕',
@@ -56,11 +56,11 @@ const USE_CASES = [
     qrSize: 'Hand Band / Shoulder',
     description:
       'Wearable QR wristband or shoulder tag for your child. If they get separated in crowded places, a good samaritan scans the band and you get alerted instantly.',
-    cardBg: 'linear-gradient(135deg,#ecfdf5,#bbf7d0)',
-    iconBg: '#064e3b',
+    cardBg: 'linear-gradient(135deg,#f8fafc,#e8f8eb)',
+    iconBg: '#0B2545',
     tag: 'Hand Band',
     tagBg: '#a7f3d0',
-    tagColor: '#064e3b',
+    tagColor: '#0B2545',
     image:
       'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=600&q=80',
     badge: '🧒',
@@ -72,11 +72,11 @@ const USE_CASES = [
     qrSize: 'QR + NFC Sticker',
     description:
       'Stick a dual QR+NFC tag on your laptop, camera, or any valuable. Works with both QR scan and NFC tap for maximum recovery speed.',
-    cardBg: 'linear-gradient(135deg,#f0fdf4,#dcfce7)',
-    iconBg: '#166534',
+    cardBg: 'linear-gradient(135deg,#f8fafc,#e8f8eb)',
+    iconBg: '#2ebd3a',
     tag: 'NFC + QR',
-    tagBg: '#dcfce7',
-    tagColor: '#166534',
+    tagBg: '#e8f8eb',
+    tagColor: '#2ebd3a',
     image:
       'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=600&q=80',
     badge: '💻',
@@ -88,10 +88,10 @@ const USE_CASES = [
     qrSize: 'Emergency QR + NFC',
     description:
       'Emergency profile with medical info, blood group, and contacts. NFC tap or QR scan gives responders instant access to critical details — no app needed.',
-    cardBg: 'linear-gradient(135deg,#ecfdf5,#a7f3d0)',
-    iconBg: '#064e3b',
+    cardBg: 'linear-gradient(135deg,#f8fafc,#a7f3d0)',
+    iconBg: '#0B2545',
     tag: 'Senior Care',
-    tagBg: '#166534',
+    tagBg: '#2ebd3a',
     tagColor: '#fff',
     image:
       'https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=600&q=80',
@@ -119,12 +119,12 @@ export default function UseCases() {
               gap: 8,
               padding: '8px 20px',
               borderRadius: 100,
-              background: '#dcfce7',
-              border: '1px solid #bbf7d0',
+              background: '#e8f8eb',
+              border: '1px solid #e8f8eb',
               marginBottom: 16,
             }}
           >
-            <span style={{ fontSize: 13, fontWeight: 700, color: '#166534' }}>
+            <span style={{ fontSize: 13, fontWeight: 700, color: '#2ebd3a' }}>
               Real-World Use Cases
             </span>
           </div>
@@ -133,7 +133,7 @@ export default function UseCases() {
             style={{
               fontSize: 'clamp(28px,4vw,44px)',
               fontWeight: 900,
-              color: '#064e3b',
+              color: '#0B2545',
               margin: '0 0 14px',
             }}
           >
@@ -194,7 +194,7 @@ function UseCard({
         borderRadius: 24,
         overflow: 'hidden',
         background: cardBg,
-        border: '1.5px solid #bbf7d0',
+        border: '1.5px solid #e8f8eb',
         boxShadow: hovered ? '0 24px 56px rgba(6,78,59,0.14)' : '0 4px 24px rgba(6,78,59,0.07)',
         transition: 'all 0.3s ease',
         position: 'relative',
@@ -208,7 +208,7 @@ function UseCard({
             top: 14,
             right: 14,
             zIndex: 10,
-            background: '#166534',
+            background: '#2ebd3a',
             color: '#fff',
             fontSize: 11,
             fontWeight: 800,
@@ -255,7 +255,7 @@ function UseCard({
             padding: '6px 12px',
             fontSize: 11,
             fontWeight: 700,
-            color: '#166534',
+            color: '#2ebd3a',
             display: 'flex',
             alignItems: 'center',
             gap: 6,
@@ -263,7 +263,7 @@ function UseCard({
             zIndex: 2,
           }}
         >
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#166534" strokeWidth="2.5">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2ebd3a" strokeWidth="2.5">
             <rect x="3" y="3" width="7" height="7" />
             <rect x="14" y="3" width="7" height="7" />
             <rect x="3" y="14" width="7" height="7" />
@@ -300,7 +300,7 @@ function UseCard({
             </div>
 
             <div>
-              <h3 style={{ margin: 0, fontSize: 16, fontWeight: 800, color: '#064e3b' }}>
+              <h3 style={{ margin: 0, fontSize: 16, fontWeight: 800, color: '#0B2545' }}>
                 {title}
               </h3>
               <div style={{ fontSize: 11, color: '#6b7280', fontWeight: 600, marginTop: 2 }}>

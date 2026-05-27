@@ -69,7 +69,7 @@ export default function StatsBar() {
           className="w-full h-full"
           style={{
             backgroundImage:
-              'radial-gradient(#16a34a 1px, transparent 1px)',
+              'radial-gradient(#2ebd3a 1px, transparent 1px)',
             backgroundSize: '28px 28px',
           }}
         />

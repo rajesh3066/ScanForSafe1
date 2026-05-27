@@ -2,13 +2,13 @@ import { Laptop, PawPrint, Package, Droplets, Heart, Phone, MapPin, ShieldCheck 
 
 export default function ValuablesPetDetails() {
   return (
-    <section style={{ background: 'linear-gradient(180deg,#f0fdf4,#ffffff)', padding: '80px 0' }}>
+    <section style={{ background: 'linear-gradient(180deg,#f8fafc,#ffffff)', padding: '80px 0' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32 }} className="vp-grid">
 
           {/* Valuables */}
           <DetailCard
-            icon={Laptop} color="#166534" bg="#dcfce7"
+            icon={Laptop} color="#2ebd3a" bg="#e8f8eb"
             title="Valuables Details"
             subtitle="Laptops, Electronics & Items"
             emoji="💻"
@@ -24,7 +24,7 @@ export default function ValuablesPetDetails() {
 
           {/* Pet Details */}
           <DetailCard
-            icon={PawPrint} color="#064e3b" bg="#a7f3d0"
+            icon={PawPrint} color="#0B2545" bg="#a7f3d0"
             title="Pet Details"
             subtitle="Dogs, Cats & Animals"
             emoji="🐕"
@@ -48,18 +48,18 @@ function DetailCard({ icon: Icon, color, bg, title, subtitle, emoji, fields, fea
   return (
     <div style={{
       background: '#fff', borderRadius: 24, overflow: 'hidden',
-      border: '1.5px solid #dcfce7', boxShadow: '0 8px 32px rgba(6,78,59,0.08)',
+      border: '1.5px solid #e8f8eb', boxShadow: '0 8px 32px rgba(6,78,59,0.08)',
     }}>
       {/* header */}
-      <div style={{ background: `linear-gradient(135deg,${color === '#166534' ? '#064e3b' : '#166534'},${color})`, padding: '24px 24px 20px' }}>
+      <div style={{ background: `linear-gradient(135deg,${color === '#2ebd3a' ? '#0B2545' : '#2ebd3a'},${color})`, padding: '24px 24px 20px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
           <div style={{ width: 52, height: 52, borderRadius: 16, background: 'rgba(255,255,255,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Icon size={26} color="#dcfce7" />
+            <Icon size={26} color="#e8f8eb" />
           </div>
           <div>
-            <div style={{ color: '#86efac', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>{emoji} Details</div>
-            <h3 style={{ color: '#f0fdf4', fontWeight: 900, fontSize: 20, margin: '2px 0 0' }}>{title}</h3>
-            <div style={{ color: 'rgba(220,252,231,0.7)', fontSize: 12, marginTop: 2 }}>{subtitle}</div>
+            <div style={{ color: '#7ded88', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>{emoji} Details</div>
+            <h3 style={{ color: '#f8fafc', fontWeight: 900, fontSize: 20, margin: '2px 0 0' }}>{title}</h3>
+            <div style={{ color: 'rgba(232, 248, 235,0.7)', fontSize: 12, marginTop: 2 }}>{subtitle}</div>
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@ function DetailCard({ icon: Icon, color, bg, title, subtitle, emoji, fields, fea
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
             {features.map(f => (
               <div key={f} style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12, color: '#374151', fontWeight: 500 }}>
-                <ShieldCheck size={13} color="#166534" />
+                <ShieldCheck size={13} color="#2ebd3a" />
                 {f}
               </div>
             ))}

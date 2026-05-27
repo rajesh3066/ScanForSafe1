@@ -1,227 +1,355 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Facebook,
   Instagram,
-  Send,
-  Home,
-  Users,
-  Briefcase,
-  Package,
-  FileText,
   Mail,
   Phone,
   MapPin,
   ShieldCheck,
-  Handshake,
-  Star,
-  Target,
-  BookOpen,
   Lock,
   Leaf,
   ArrowRight,
-  Zap,
-  Lightbulb,
-  Sparkles,
   Twitter,
   Linkedin,
-  Globe,
+  Send,
+  Globe
 } from "lucide-react";
 
 const logo = "/logo.png";
 
-const quickLinks = [
-  { icon: <Home size={15} />, label: "Home" },
-  { icon: <Users size={15} />, label: "About Us" },
-  { icon: <Briefcase size={15} />, label: "Services" },
-  { icon: <Package size={15} />, label: "Products" },
-  { icon: <Lightbulb size={15} />, label: "Use Cases" },
-  { icon: <Sparkles size={15} />, label: "Features" },
-  { icon: <FileText size={15} />, label: "Blog" },
-  { icon: <Send size={15} />, label: "Contact" },
-];
-
-const resources = [
-  { icon: <ShieldCheck size={15} />, label: "Safety Guide" },
-  { icon: <BookOpen size={15} />, label: "Scan Manual" },
-  { icon: <Users size={15} />, label: "FAQ" },
-  { icon: <Lock size={15} />, label: "Privacy Policy" },
-  { icon: <FileText size={15} />, label: "Terms of Use" },
-  { icon: <Globe size={15} />, label: "API Docs" },
-];
-
-const stats = [
-  {
-    icon: <ShieldCheck size={22} />,
-    number: "50K+",
-    label: "Products verified",
-  },
-  {
-    icon: <Handshake size={22} />,
-    number: "120+",
-    label: "Partner brands",
-  },
-  {
-    icon: <Star size={22} />,
-    number: "4.9★",
-    label: "User rating",
-  },
-  {
-    icon: <Target size={22} />,
-    number: "99.8%",
-    label: "Scan accuracy",
-  },
-];
-
-const socialLinks = [
-  { Icon: Facebook, label: "Facebook" },
-  { Icon: Instagram, label: "Instagram" },
-  { Icon: Twitter, label: "Twitter" },
-  { Icon: Linkedin, label: "LinkedIn" },
-  { Icon: Send, label: "Telegram" },
-];
-
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    if (email.trim()) {
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setEmail("");
+      }, 3000);
+    }
+  };
+
+  const navLinks = [
+    { label: "Home", to: "/" },
+    { label: "Features", to: "/features" },
+    { label: "Use Cases", to: "/use-cases" },
+    { label: "How It Works", to: "/how-it-works" },
+    { label: "Contact", to: "/contact" }
+  ];
+
+  const socialLinks = [
+    { Icon: Facebook, href: "https://facebook.com", label: "Facebook" },
+    { Icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+    { Icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+    { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { Icon: Send, href: "https://telegram.org", label: "Telegram" }
+  ];
+
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
-        .footer-root * {
-          font-family: 'Plus Jakarta Sans', sans-serif;
-          box-sizing: border-box;
+        .sfs-footer {
+          position: relative;
+          background-image: url('/footer_bg.png');
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          border-top: 3px solid #2ebd3a;
+          color: #f1f5f9;
+          font-family: 'Inter', sans-serif;
+          width: 100%;
+          overflow: hidden;
         }
 
-        .footer-brand-font {
-          font-family: 'Syne', sans-serif;
+        /* Parallax support for Safari/mobile where fixed attachment breaks */
+        @media (hover: none) {
+          .sfs-footer {
+            background-attachment: scroll;
+          }
         }
 
-        .footer-link-row {
+        .sfs-footer-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(135deg, rgba(11, 37, 69, 0.95) 0%, rgba(5, 18, 36, 0.96) 100%);
+          z-index: 1;
+        }
+
+        .sfs-footer-container {
+          position: relative;
+          max-width: 1300px;
+          margin: 0 auto;
+          padding: 80px clamp(20px, 5vw, 60px) 30px;
+          z-index: 2;
+        }
+
+        /* ══ GRID LAYOUT ══ */
+        .sfs-footer-main {
+          display: grid;
+          grid-template-columns: 2fr 1fr 1.5fr;
+          gap: clamp(30px, 5vw, 80px);
+          margin-bottom: 60px;
+        }
+
+        /* ══ COLUMN 1: BRAND ══ */
+        .sfs-footer-brand {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .sfs-footer-logo-wrap {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+        }
+
+        .sfs-footer-logo-box {
+          position: relative;
+          width: 60px;
+          height: 60px;
+          border-radius: 16px;
+          overflow: hidden;
+          background: rgba(255, 255, 255, 0.9);
+          border: 2px solid #2ebd3a;
+          box-shadow: 0 0 20px rgba(46, 189, 58, 0.3);
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .sfs-footer-logo-img {
+          width: 82%;
+          height: auto;
+          object-fit: contain;
+        }
+
+        .sfs-footer-title {
+          font-family: 'Poppins', sans-serif;
+          font-size: 22px;
+          font-weight: 800;
+          margin: 0;
+          color: #ffffff;
+          line-height: 1.2;
+          letter-spacing: -0.02em;
+        }
+
+        .sfs-footer-title span {
+          color: #2ebd3a;
+          text-shadow: 0 0 10px rgba(46, 189, 58, 0.2);
+        }
+
+        .sfs-footer-tagline {
+          font-size: 10px;
+          font-weight: 700;
+          color: #2ebd3a;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          margin-top: 4px;
+        }
+
+        .sfs-footer-desc {
+          font-size: 14px;
+          line-height: 1.7;
+          color: #cbd5e1;
+          margin: 0;
+          max-width: 440px;
+        }
+
+        /* Social Icons */
+        .sfs-footer-socials {
+          display: flex;
+          gap: 10px;
+          margin-top: 10px;
+        }
+
+        .sfs-social-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          border-radius: 12px;
+          background: rgba(255, 255, 255, 0.05);
+          border: 1.5px solid rgba(255, 255, 255, 0.1);
+          color: #cbd5e1;
+          cursor: pointer;
+          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+          text-decoration: none;
+        }
+
+        .sfs-social-icon:hover {
+          background: #2ebd3a;
+          color: #ffffff;
+          border-color: #2ebd3a;
+          transform: translateY(-4px);
+          box-shadow: 0 8px 24px rgba(46, 189, 58, 0.4);
+        }
+
+        /* ══ COLUMN 2: NAVIGATION ══ */
+        .sfs-footer-section-title {
+          font-family: 'Poppins', sans-serif;
+          font-size: 16px;
+          font-weight: 700;
+          color: #2ebd3a;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          margin: 0 0 24px 0;
+          position: relative;
+          display: inline-block;
+        }
+
+        .sfs-footer-section-title::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -6px;
+          width: 32px;
+          height: 2px;
+          background: #2ebd3a;
+          border-radius: 2px;
+        }
+
+        .sfs-footer-links {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .sfs-footer-link {
+          color: #cbd5e1;
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          transition: all 0.2s ease;
+        }
+
+        .sfs-footer-link:hover {
+          color: #ffffff;
+          transform: translateX(5px);
+        }
+
+        .sfs-footer-link-dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #2ebd3a;
+          opacity: 0.6;
+          transition: all 0.2s ease;
+        }
+
+        .sfs-footer-link:hover .sfs-footer-link-dot {
+          opacity: 1;
+          transform: scale(1.3);
+          box-shadow: 0 0 8px #2ebd3a;
+        }
+
+        /* ══ COLUMN 3: CONTACT ══ */
+        .sfs-footer-contact-list {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .sfs-footer-contact-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 12px;
+          font-size: 14px;
+          color: #cbd5e1;
+          line-height: 1.6;
+        }
+
+        .sfs-footer-contact-icon {
+          color: #2ebd3a;
+          font-size: 16px;
+          flex-shrink: 0;
+          margin-top: 3px;
+        }
+
+        .sfs-footer-contact-text strong {
+          color: #ffffff;
+          display: block;
+          margin-bottom: 2px;
+        }
+
+        /* ══ NEWSLETTER ROW ══ */
+        .sfs-footer-newsletter-wrap {
+          border-top: 1.5px dashed rgba(255, 255, 255, 0.1);
+          border-bottom: 1.5px dashed rgba(255, 255, 255, 0.1);
+          padding: 30px 0;
+          margin-bottom: 40px;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 10px 12px;
-          border-radius: 12px;
-          cursor: pointer;
-          color: #374151;
-          transition: all 0.17s ease;
-          border-bottom: 1px solid #edf2ee;
-          gap: 12px;
+          gap: 24px;
+          flex-wrap: wrap;
         }
 
-        .footer-link-row:last-child {
-          border-bottom: none;
+        .sfs-newsletter-info h3 {
+          font-family: 'Poppins', sans-serif;
+          font-size: 18px;
+          font-weight: 700;
+          color: #ffffff;
+          margin: 0 0 4px 0;
         }
 
-        .footer-link-row:hover {
-          background: #f0fdf4;
-          color: #16a34a;
-          padding-left: 16px;
+        .sfs-newsletter-info p {
+          font-size: 13.5px;
+          color: #cbd5e1;
+          margin: 0;
         }
 
-        .footer-link-row:hover .fl-arrow {
-          transform: translateX(3px);
-          color: #16a34a;
-        }
-
-        .fl-arrow {
-          transition: transform 0.17s ease;
-          color: #9ca3af;
-        }
-
-        .social-btn {
+        .sfs-newsletter-form {
           display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 42px;
-          height: 42px;
+          width: 100%;
+          max-width: 440px;
+          background: rgba(255, 255, 255, 0.04);
+          border: 1.5px solid rgba(255, 255, 255, 0.1);
           border-radius: 14px;
-          border: 1.5px solid #dce5de;
-          background: white;
-          color: #16a34a;
-          cursor: pointer;
-          transition: all 0.2s ease;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+          padding: 4px;
+          transition: all 0.25s ease;
         }
 
-        .social-btn:hover {
-          background: linear-gradient(135deg, #16a34a, #15803d);
-          color: white;
-          border-color: transparent;
-          transform: translateY(-3px);
-          box-shadow: 0 6px 16px rgba(22,163,74,0.3);
+        .sfs-newsletter-form:focus-within {
+          border-color: #2ebd3a;
+          box-shadow: 0 0 16px rgba(46, 189, 58, 0.2);
+          background: rgba(255, 255, 255, 0.08);
         }
 
-        .stat-card {
-          display: flex;
-          align-items: center;
-          gap: 14px;
-          padding: 18px 22px;
-          position: relative;
+        .sfs-newsletter-input {
+          flex: 1;
+          background: transparent;
+          border: none;
+          outline: none;
+          color: #ffffff;
+          padding: 10px 14px;
+          font-size: 13.5px;
+          width: 100%;
         }
 
-        .stat-card::after {
-          content: '';
-          position: absolute;
-          right: 0;
-          top: 20%;
-          height: 60%;
-          width: 1px;
-          background: #e5ece7;
+        .sfs-newsletter-input::placeholder {
+          color: #94a3b8;
         }
 
-        .stat-card:last-child::after {
-          display: none;
-        }
-
-        .stat-icon-wrap {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 50px;
-          height: 50px;
-          border-radius: 16px;
-          background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
-          color: white;
-          box-shadow: 0 4px 14px rgba(22,163,74,0.3);
-          flex-shrink: 0;
-        }
-
-        .contact-card {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          padding: 14px;
-          border-radius: 18px;
-          border: 1px solid #e5ece7;
-          background: white;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-          transition: all 0.2s ease;
-          cursor: pointer;
-        }
-
-        .contact-card:hover {
-          border-color: #bbf7d0;
-          box-shadow: 0 4px 16px rgba(22,163,74,0.1);
-          transform: translateX(3px);
-        }
-
-        .contact-icon {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 42px;
-          height: 42px;
-          border-radius: 14px;
-          background: #dcfce7;
-          color: #15803d;
-          flex-shrink: 0;
-        }
-
-        .cta-footer-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          padding: 12px 24px;
-          border-radius: 14px;
+        .sfs-newsletter-btn {
+          background: #2ebd3a;
+          color: #ffffff;
+          border: none;
+          outline: none;
+          border-radius: 10px;
+          padding: 0 20px;
           font-size: 13.5px;
           font-weight: 700;
           cursor: pointer;
@@ -229,617 +357,232 @@ export default function Footer() {
           white-space: nowrap;
         }
 
-        .cta-footer-btn.primary {
-          background: linear-gradient(135deg, #16a34a, #15803d);
-          color: white;
-          border: none;
-          box-shadow: 0 4px 16px rgba(22,163,74,0.35);
+        .sfs-newsletter-btn:hover {
+          background: #239c2d;
+          box-shadow: 0 4px 12px rgba(46, 189, 58, 0.3);
         }
 
-        .cta-footer-btn.primary:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(22,163,74,0.45);
+        /* ══ FOOTER BOTTOM ══ */
+        .sfs-footer-bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+          padding-top: 30px;
+          border-top: 1.5px solid rgba(255, 255, 255, 0.08);
+          flex-wrap: wrap;
         }
 
-        .cta-footer-btn.outline {
-          background: transparent;
-          color: #16a34a;
-          border: 1.5px solid #16a34a;
+        .sfs-footer-copy {
+          font-size: 13px;
+          color: #94a3b8;
+          margin: 0;
         }
 
-        .cta-footer-btn.outline:hover {
-          background: #f0fdf4;
+        .sfs-footer-copy strong {
+          color: #cbd5e1;
         }
 
-        .trust-badge {
-          display: inline-flex;
+        .sfs-footer-badges {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+          flex-wrap: wrap;
+        }
+
+        .sfs-footer-badge {
+          display: flex;
           align-items: center;
           gap: 6px;
           font-size: 12px;
-          font-weight: 600;
-          color: #6b7280;
+          color: #94a3b8;
+          font-weight: 500;
         }
 
-        .newsletter-input {
-          flex: 1;
-          border: 1.5px solid #e5ece7;
-          border-radius: 14px 0 0 14px;
-          padding: 12px 14px;
-          font-size: 13px;
-          color: #374151;
-          background: white;
-          outline: none;
+        .sfs-footer-badge-icon {
+          color: #2ebd3a;
         }
 
-        .newsletter-input:focus {
-          border-color: #16a34a;
-        }
-
-        .newsletter-btn {
-          padding: 12px 20px;
-          background: linear-gradient(135deg, #16a34a, #15803d);
-          color: white;
-          border: none;
-          border-radius: 0 14px 14px 0;
-          font-size: 13px;
-          font-weight: 700;
-          cursor: pointer;
-        }
-
-        .logo-footer-img {
-          height: 52px;
-          width: auto;
-          object-fit: contain;
-        }
-
-        .section-label {
-          font-size: 11px;
-          font-weight: 800;
-          color: #16a34a;
-          letter-spacing: 0.14em;
-          text-transform: uppercase;
-          margin-bottom: 14px;
-        }
-
-        @media (max-width: 768px) {
-          .footer-mobile-stack {
-            flex-direction: column !important;
-            align-items: flex-start !important;
+        /* ══ RESPONSIVE BREAKPOINTS ══ */
+        @media (max-width: 992px) {
+          .sfs-footer-main {
+            grid-template-columns: 1.2fr 1fr;
           }
-
-          .newsletter-mobile {
-            width: 100% !important;
+          .sfs-footer-brand {
+            grid-column: span 2;
           }
+        }
 
-          .newsletter-mobile input {
-            width: 100%;
+        @media (max-width: 600px) {
+          .sfs-footer-main {
+            grid-template-columns: 1fr;
+            gap: 40px;
           }
-
-          .stat-card::after {
-            display: none;
+          .sfs-footer-brand {
+            grid-column: span 1;
           }
-
-          .footer-bottom {
-            flex-direction: column !important;
-            align-items: flex-start !important;
+          .sfs-footer-container {
+            padding-top: 60px;
+          }
+          .sfs-footer-newsletter-wrap {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          .sfs-newsletter-form {
+            max-width: 100%;
+          }
+          .sfs-footer-bottom {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+          .sfs-footer-badges {
+            justify-content: center;
           }
         }
       `}</style>
 
-      <footer
-        className="footer-root"
-        style={{
-          background: "#f4f6f5",
-          width: "100%",
-          margin: 0,
-          padding: 0,
-        }}
-      >
-        <div
-          style={{
-            width: "100%",
-            overflow: "hidden",
-            background: "white",
-            boxShadow: "0 10px 40px rgba(0,0,0,0.05)",
-          }}
-        >
-          {/* TOP GREEN BAR */}
-          <div
-            style={{
-              height: 5,
-              background:
-                "linear-gradient(90deg, #16a34a 0%, #22c55e 50%, #15803d 100%)",
-            }}
-          />
-
-          {/* NEWSLETTER */}
-          <div
-            className="footer-mobile-stack"
-            style={{
-              background:
-                "linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)",
-              borderBottom: "1px solid #e5ece7",
-              padding: "28px clamp(20px, 5vw, 60px)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: 20,
-              flexWrap: "wrap",
-            }}
-          >
-            <div>
-              <p className="section-label" style={{ marginBottom: 4 }}>
-                Stay Updated
-              </p>
-
-              <h3
-                style={{
-                  fontSize: 24,
-                  fontWeight: 800,
-                  color: "#111827",
-                  margin: 0,
-                }}
-              >
-                Get product safety alerts & news
-              </h3>
+      <footer className="sfs-footer">
+        <div className="sfs-footer-overlay"></div>
+        <div className="sfs-footer-container">
+          
+          {/* NEWSLETTER ROW */}
+          <div className="sfs-footer-newsletter-wrap">
+            <div className="sfs-newsletter-info">
+              <h3>Get Safety Alerts & Updates</h3>
+              <p>Subscribe to our corporate newsletter for modern verification insights.</p>
             </div>
-
-            <div
-              className="newsletter-mobile"
-              style={{
-                display: "flex",
-                maxWidth: 480,
-                width: "100%",
-              }}
-            >
+            
+            <form onSubmit={handleSubscribe} className="sfs-newsletter-form">
               <input
-                className="newsletter-input"
+                className="sfs-newsletter-input"
                 type="email"
-                placeholder="Enter your email address"
+                required
+                placeholder={submitted ? "Thanks for subscribing!" : "Enter your corporate email"}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={submitted}
               />
-              <button className="newsletter-btn">Subscribe</button>
-            </div>
+              <button type="submit" className="sfs-newsletter-btn" disabled={submitted}>
+                {submitted ? "Subscribed!" : "Subscribe"}
+              </button>
+            </form>
           </div>
 
-          {/* MAIN GRID */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns:
-                "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: 24,
-              padding: "clamp(24px, 5vw, 60px)",
-            }}
-          >
-            {/* BRAND */}
-            <div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 12,
-                  marginBottom: 18,
-                }}
-              >
-                <img
-                  src={logo}
-                  alt="ScanForSafe"
-                  className="logo-footer-img"
-                />
-
+          {/* MAIN COLUMN GRID */}
+          <div className="sfs-footer-main">
+            
+            {/* COLUMN 1: BRAND INFORMATION */}
+            <div className="sfs-footer-brand">
+              <Link to="/" className="sfs-footer-logo-wrap" style={{ textDecoration: 'none' }}>
+                <div className="sfs-footer-logo-box">
+                  <img src={logo} alt="ScanForSafe Logo" className="sfs-footer-logo-img" />
+                </div>
                 <div>
-                  <h2
-                    className="footer-brand-font"
-                    style={{
-                      fontSize: 26,
-                      fontWeight: 800,
-                      color: "#111827",
-                      margin: 0,
-                    }}
-                  >
-                    Scan<span style={{ color: "#16a34a" }}>ForSafe</span>
+                  <h2 className="sfs-footer-title">
+                    Scan<span>ForSafe</span>
                   </h2>
-
-                  <p
-                    style={{
-                      fontSize: 10,
-                      fontWeight: 700,
-                      color: "#16a34a",
-                      letterSpacing: "0.18em",
-                      textTransform: "uppercase",
-                      margin: 0,
-                    }}
-                  >
-                    Scan Smarter · Stay Safer
-                  </p>
+                  <div className="sfs-footer-tagline">Smart Shield</div>
                 </div>
-              </div>
-
-              <p
-                style={{
-                  fontSize: 14,
-                  lineHeight: 1.8,
-                  color: "#4b5563",
-                  maxWidth: 320,
-                  marginBottom: 24,
-                }}
-              >
-                Innovations in product safety & verification.
-                Empowering a safer world through trusted technology.
+              </Link>
+              
+              <p className="sfs-footer-desc">
+                Pioneering secure QR code solutions, visual verification systems, and smart tracking technologies. Empowering a safer and more authentic world through trusted hardware and visual tags.
               </p>
-
-              {/* SOCIALS */}
-              <div
-                style={{
-                  display: "flex",
-                  gap: 10,
-                  flexWrap: "wrap",
-                  marginBottom: 24,
-                }}
-              >
-                {socialLinks.map(({ Icon, label }, i) => (
-                  <button key={i} className="social-btn" title={label}>
+              
+              <div className="sfs-footer-socials">
+                {socialLinks.map(({ Icon, href, label }, i) => (
+                  <a
+                    key={i}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="sfs-social-icon"
+                    title={label}
+                  >
                     <Icon size={18} />
-                  </button>
+                  </a>
                 ))}
               </div>
             </div>
 
-            {/* QUICK LINKS */}
-            <div
-              style={{
-                background: "#fafcfb",
-                border: "1px solid #e5ece7",
-                borderRadius: 18,
-                padding: 24,
-              }}
-            >
-              <p className="section-label">Navigation</p>
-
-              <h3
-                style={{
-                  fontSize: 18,
-                  fontWeight: 800,
-                  color: "#111827",
-                  margin: "0 0 18px",
-                }}
-              >
-                Quick Links
-              </h3>
-
-              {quickLinks.map((item, i) => (
-                <div key={i} className="footer-link-row">
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 10,
-                    }}
-                  >
-                    <span
-                      style={{
-                        color: "#16a34a",
-                        display: "flex",
-                      }}
-                    >
-                      {item.icon}
-                    </span>
-
-                    <span
-                      style={{
-                        fontSize: 14,
-                        fontWeight: 600,
-                      }}
-                    >
-                      {item.label}
-                    </span>
-                  </div>
-
-                  <ArrowRight size={14} className="fl-arrow" />
-                </div>
-              ))}
-            </div>
-
-            {/* RESOURCES */}
-            <div
-              style={{
-                background: "#fafcfb",
-                border: "1px solid #e5ece7",
-                borderRadius: 18,
-                padding: 24,
-              }}
-            >
-              <p className="section-label">Help Center</p>
-
-              <h3
-                style={{
-                  fontSize: 18,
-                  fontWeight: 800,
-                  color: "#111827",
-                  margin: "0 0 18px",
-                }}
-              >
-                Resources
-              </h3>
-
-              {resources.map((item, i) => (
-                <div key={i} className="footer-link-row">
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 10,
-                    }}
-                  >
-                    <span
-                      style={{
-                        color: "#16a34a",
-                        display: "flex",
-                      }}
-                    >
-                      {item.icon}
-                    </span>
-
-                    <span
-                      style={{
-                        fontSize: 14,
-                        fontWeight: 600,
-                      }}
-                    >
-                      {item.label}
-                    </span>
-                  </div>
-
-                  <ArrowRight size={14} className="fl-arrow" />
-                </div>
-              ))}
-            </div>
-
-            {/* CONTACT */}
+            {/* COLUMN 2: NAVIGATION */}
             <div>
-              <p className="section-label">Get In Touch</p>
-
-              <h3
-                style={{
-                  fontSize: 18,
-                  fontWeight: 800,
-                  color: "#111827",
-                  margin: "0 0 18px",
-                }}
-              >
-                Contact Us
-              </h3>
-
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 12,
-                }}
-              >
-                {[
-                  {
-                    icon: <Mail size={17} />,
-                    title: "Email",
-                    value: "info@scanforsafe.com",
-                  },
-                  {
-                    icon: <Phone size={17} />,
-                    title: "Phone",
-                    value: "+91 98765 43210",
-                  },
-                  {
-                    icon: <MapPin size={17} />,
-                    title: "Location",
-                    value: "India",
-                  },
-                ].map((item, i) => (
-                  <div key={i} className="contact-card">
-                    <div className="contact-icon">{item.icon}</div>
-
-                    <div>
-                      <h4
-                        style={{
-                          fontSize: 12,
-                          fontWeight: 700,
-                          color: "#111827",
-                          margin: "0 0 2px",
-                        }}
-                      >
-                        {item.title}
-                      </h4>
-
-                      <p
-                        style={{
-                          fontSize: 13,
-                          color: "#6b7280",
-                          margin: 0,
-                        }}
-                      >
-                        {item.value}
-                      </p>
-                    </div>
-                  </div>
+              <h4 className="sfs-footer-section-title">Navigation</h4>
+              <div className="sfs-footer-links">
+                {navLinks.map((item, i) => (
+                  <Link
+                    key={i}
+                    to={item.to}
+                    className="sfs-footer-link"
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  >
+                    <span className="sfs-footer-link-dot"></span>
+                    {item.label}
+                  </Link>
                 ))}
               </div>
             </div>
-          </div>
 
-          {/* STATS */}
-          <div
-            style={{
-              margin: "0 clamp(20px, 5vw, 60px) 30px",
-              borderRadius: 18,
-              border: "1px solid #e5ece7",
-              background: "#f8faf9",
-              overflow: "hidden",
-            }}
-          >
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns:
-                  "repeat(auto-fit, minmax(220px, 1fr))",
-              }}
-            >
-              {stats.map((item, i) => (
-                <div key={i} className="stat-card">
-                  <div className="stat-icon-wrap">{item.icon}</div>
-
-                  <div>
-                    <h4
-                      style={{
-                        fontSize: 28,
-                        fontWeight: 800,
-                        color: "#15803d",
-                        margin: "0 0 2px",
-                      }}
-                    >
-                      {item.number}
-                    </h4>
-
-                    <p
-                      style={{
-                        fontSize: 12,
-                        color: "#6b7280",
-                        margin: 0,
-                      }}
-                    >
-                      {item.label}
-                    </p>
+            {/* COLUMN 3: CONTACT INFORMATION */}
+            <div>
+              <h4 className="sfs-footer-section-title">Contact Us</h4>
+              <div className="sfs-footer-contact-list">
+                
+                <div className="sfs-footer-contact-item">
+                  <Phone className="sfs-footer-contact-icon" size={17} />
+                  <div className="sfs-footer-contact-text">
+                    <strong>Phone</strong>
+                    +91 98765 43210
                   </div>
                 </div>
-              ))}
+
+                <div className="sfs-footer-contact-item">
+                  <Mail className="sfs-footer-contact-icon" size={17} />
+                  <div className="sfs-footer-contact-text">
+                    <strong>Email</strong>
+                    info@scanforsafe.com
+                  </div>
+                </div>
+
+                <div className="sfs-footer-contact-item">
+                  <MapPin className="sfs-footer-contact-icon" size={17} />
+                  <div className="sfs-footer-contact-text">
+                    <strong>Corporate Office</strong>
+                    SFSI Innovations Tower, Phase-2,
+                    Cyber Heights, Hyderabad, India
+                  </div>
+                </div>
+
+              </div>
             </div>
+
           </div>
 
-          {/* CTA */}
-          <div
-            className="footer-mobile-stack"
-            style={{
-              margin: "0 clamp(20px, 5vw, 60px) 30px",
-              borderRadius: 18,
-              border: "1px solid #e5ece7",
-              background:
-                "linear-gradient(135deg, #fafcfb 0%, #f0fdf4 100%)",
-              padding: "32px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: 20,
-              flexWrap: "wrap",
-            }}
-          >
-            <div>
-              <p className="section-label" style={{ marginBottom: 4 }}>
-                Join Thousands of Users
-              </p>
-
-              <h2
-                style={{
-                  fontSize: 30,
-                  fontWeight: 800,
-                  color: "#111827",
-                  margin: "0 0 8px",
-                }}
-              >
-                Ready to scan{" "}
-                <span style={{ color: "#16a34a" }}>
-                  smarter?
-                </span>
-              </h2>
-
-              <p
-                style={{
-                  fontSize: 14,
-                  color: "#6b7280",
-                  margin: 0,
-                }}
-              >
-                Join thousands verifying product safety with
-                ScanForSafe.
-              </p>
-            </div>
-
-            <div
-              style={{
-                display: "flex",
-                gap: 12,
-                flexWrap: "wrap",
-              }}
-            >
-              <button className="cta-footer-btn primary">
-                <Zap size={15} />
-                Get Started Free
-              </button>
-
-              <button className="cta-footer-btn outline">
-                Learn More
-                <ArrowRight size={14} />
-              </button>
-            </div>
-          </div>
-
-          {/* BOTTOM BAR */}
-          <div
-            className="footer-bottom"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: 16,
-              borderTop: "1px solid #e5ece7",
-              padding: "20px clamp(20px, 5vw, 60px)",
-              flexWrap: "wrap",
-            }}
-          >
-            <p
-              style={{
-                fontSize: 13,
-                color: "#6b7280",
-                margin: 0,
-              }}
-            >
-              © 2025{" "}
-              <strong style={{ color: "#374151" }}>
-                ScanForSafe Innovations
-              </strong>
-              . All rights reserved.
+          {/* FOOTER BOTTOM ROW */}
+          <div className="sfs-footer-bottom">
+            <p className="sfs-footer-copy">
+              &copy; {new Date().getFullYear()} <strong>ScanForSafe Innovations Pvt Ltd</strong>. All rights reserved.
             </p>
 
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 20,
-                flexWrap: "wrap",
-              }}
-            >
-              <span className="trust-badge">
-                <Lock
-                  size={14}
-                  style={{ color: "#16a34a" }}
-                />
+            <div className="sfs-footer-badges">
+              <span className="sfs-footer-badge">
+                <Lock size={14} className="sfs-footer-badge-icon" />
                 SSL Secured
               </span>
-
-              <span className="trust-badge">
-                <ShieldCheck
-                  size={14}
-                  style={{ color: "#16a34a" }}
-                />
-                ISO Certified
+              
+              <span className="sfs-footer-badge">
+                <ShieldCheck size={14} className="sfs-footer-badge-icon" />
+                ISO 27001 Certified
               </span>
-
-              <span className="trust-badge">
-                <Leaf
-                  size={14}
-                  style={{ color: "#16a34a" }}
-                />
-                Eco Friendly
+              
+              <span className="sfs-footer-badge">
+                <Leaf size={14} className="sfs-footer-badge-icon" />
+                Eco Friendly tags
               </span>
             </div>
           </div>
+
         </div>
       </footer>
     </>

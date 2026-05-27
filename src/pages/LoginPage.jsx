@@ -21,12 +21,12 @@ function ShieldIllustration() {
   return (
     <svg viewBox="0 0 280 280" className="w-52 h-52" fill="none" xmlns="http://www.w3.org/2000/svg">
       {/* Glow backdrop */}
-      <ellipse cx="140" cy="180" rx="90" ry="30" fill="#16a34a" fillOpacity="0.18" />
+      <ellipse cx="140" cy="180" rx="90" ry="30" fill="#2ebd3a" fillOpacity="0.18" />
 
       {/* Shield shadow */}
       <path
         d="M140 240 C100 220 68 185 68 145 L68 82 L140 55 L212 82 L212 145 C212 185 180 220 140 240Z"
-        fill="#15803d"
+        fill="#0B2545"
         fillOpacity="0.25"
         transform="translate(4,6)"
       />
@@ -35,7 +35,7 @@ function ShieldIllustration() {
       <path
         d="M140 232 C100 212 68 177 68 137 L68 74 L140 47 L212 74 L212 137 C212 177 180 212 140 232Z"
         fill="url(#shieldGrad)"
-        stroke="#15803d"
+        stroke="#0B2545"
         strokeWidth="1.5"
       />
 
@@ -63,8 +63,8 @@ function ShieldIllustration() {
       )}
 
       {/* Check circle */}
-      <circle cx="168" cy="158" r="22" fill="#16a34a" stroke="white" strokeWidth="2.5" />
-      <circle cx="168" cy="158" r="18" fill="#22c55e" />
+      <circle cx="168" cy="158" r="22" fill="#2ebd3a" stroke="white" strokeWidth="2.5" />
+      <circle cx="168" cy="158" r="18" fill="#2ebd3a" />
       <path
         d="M158 158 L164 164 L178 150"
         stroke="white"
@@ -74,18 +74,18 @@ function ShieldIllustration() {
       />
 
       {/* Orbiting dots */}
-      <circle cx="140" cy="30" r="5" fill="#4ade80" fillOpacity="0.7" />
-      <circle cx="228" cy="100" r="4" fill="#86efac" fillOpacity="0.6" />
-      <circle cx="210" cy="210" r="5" fill="#4ade80" fillOpacity="0.5" />
-      <circle cx="68" cy="195" r="3.5" fill="#86efac" fillOpacity="0.6" />
-      <circle cx="50" cy="100" r="4" fill="#4ade80" fillOpacity="0.5" />
+      <circle cx="140" cy="30" r="5" fill="#4bd557" fillOpacity="0.7" />
+      <circle cx="228" cy="100" r="4" fill="#7ded88" fillOpacity="0.6" />
+      <circle cx="210" cy="210" r="5" fill="#4bd557" fillOpacity="0.5" />
+      <circle cx="68" cy="195" r="3.5" fill="#7ded88" fillOpacity="0.6" />
+      <circle cx="50" cy="100" r="4" fill="#4bd557" fillOpacity="0.5" />
 
       {/* Defs */}
       <defs>
         <linearGradient id="shieldGrad" x1="140" y1="47" x2="140" y2="232" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#22c55e" />
-          <stop offset="50%" stopColor="#16a34a" />
-          <stop offset="100%" stopColor="#14532d" />
+          <stop offset="0%" stopColor="#2ebd3a" />
+          <stop offset="50%" stopColor="#2ebd3a" />
+          <stop offset="100%" stopColor="#081c35" />
         </linearGradient>
         <linearGradient id="shieldInner" x1="140" y1="66" x2="140" y2="210" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stopColor="white" stopOpacity="0.25" />
@@ -105,7 +105,7 @@ const FEATURES = [
     label: 'Enterprise Security',
     desc: 'End-to-end protection for your ecosystem',
     tags: 'Secure • Reliable • Robust',
-    tagColor: '#16a34a',
+    tagColor: '#2ebd3a',
   },
   {
     icon: Zap,
@@ -164,14 +164,14 @@ export default function LoginPage() {
       <div
         className="hidden lg:flex lg:w-[55%] flex-col p-10 relative overflow-hidden"
         style={{
-          background: 'linear-gradient(160deg, #f0fdf4 0%, #dcfce7 40%, #bbf7d0 100%)',
+          background: 'linear-gradient(160deg, #f8fafc 0%, #e8f8eb 40%, #e8f8eb 100%)',
         }}
       >
         {/* Subtle dot grid */}
         <div
           className="absolute inset-0 opacity-40"
           style={{
-            backgroundImage: 'radial-gradient(circle, #86efac 1px, transparent 1px)',
+            backgroundImage: 'radial-gradient(circle, #7ded88 1px, transparent 1px)',
             backgroundSize: '28px 28px',
           }}
         />
@@ -185,14 +185,14 @@ export default function LoginPage() {
 
         {/* Blur blob */}
         <div className="absolute top-20 right-20 w-80 h-80 rounded-full opacity-30"
-          style={{ background: 'radial-gradient(circle, #4ade80, transparent 70%)' }} />
+          style={{ background: 'radial-gradient(circle, #4bd557, transparent 70%)' }} />
         <div className="absolute bottom-10 left-10 w-60 h-60 rounded-full opacity-20"
-          style={{ background: 'radial-gradient(circle, #22c55e, transparent 70%)' }} />
+          style={{ background: 'radial-gradient(circle, #2ebd3a, transparent 70%)' }} />
 
         {/* Brand header */}
         <div className="relative z-10 flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl flex items-center justify-center shadow-md"
-            style={{ background: 'linear-gradient(135deg, #16a34a, #15803d)' }}>
+            style={{ background: 'linear-gradient(135deg, #2ebd3a, #0B2545)' }}>
             <ShieldCheck className="w-5 h-5 text-white" />
           </div>
           <div>
@@ -215,7 +215,7 @@ export default function LoginPage() {
             <h2 className="text-4xl font-black text-gray-900 leading-tight tracking-tight">
               Smart Product<br />
               Safety &{' '}
-              <span style={{ color: '#16a34a' }}>Authentication</span>
+              <span style={{ color: '#2ebd3a' }}>Authentication</span>
             </h2>
             <p className="text-gray-600 text-sm mt-4 leading-relaxed max-w-xs font-medium">
               AI-driven verification, counterfeit detection, and real-time monitoring to protect your products, customers, and brand integrity.
@@ -251,7 +251,7 @@ export default function LoginPage() {
         {/* Mobile brand */}
         <div className="lg:hidden flex items-center gap-2 mb-10">
           <div className="w-9 h-9 rounded-xl flex items-center justify-center"
-            style={{ background: 'linear-gradient(135deg, #16a34a, #15803d)' }}>
+            style={{ background: 'linear-gradient(135deg, #2ebd3a, #0B2545)' }}>
             <ShieldCheck className="w-5 h-5 text-white" />
           </div>
           <span className="font-black text-xl text-gray-900">Scan for Safe</span>
@@ -262,7 +262,7 @@ export default function LoginPage() {
           {/* Header */}
           <div className="mb-8">
             <h1 className="text-4xl font-black text-gray-900 tracking-tight leading-tight">
-              Welcome <span style={{ color: '#16a34a' }}>Back!</span>
+              Welcome <span style={{ color: '#2ebd3a' }}>Back!</span>
             </h1>
             <p className="text-gray-500 text-sm mt-2 font-medium">
               Sign in to continue to your dashboard
@@ -302,7 +302,7 @@ export default function LoginPage() {
                 <label className="block text-[11px] font-black text-gray-700 tracking-widest uppercase">
                   Password
                 </label>
-                <Link to="/forgot-password" className="text-xs font-bold hover:underline" style={{ color: '#16a34a' }}>
+                <Link to="/forgot-password" className="text-xs font-bold hover:underline" style={{ color: '#2ebd3a' }}>
                   Forgot password?
                 </Link>
               </div>
@@ -339,8 +339,8 @@ export default function LoginPage() {
               disabled={loading}
               className="w-full py-4 rounded-xl text-white font-black text-sm tracking-wide flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed mt-1"
               style={{
-                background: 'linear-gradient(135deg, #16a34a, #15803d)',
-                boxShadow: '0 10px 28px rgba(22,163,74,.28)',
+                background: 'linear-gradient(135deg, #2ebd3a, #0B2545)',
+                boxShadow: '0 10px 28px rgba(46, 189, 58,.28)',
               }}
             >
               {loading ? (
@@ -369,7 +369,7 @@ export default function LoginPage() {
           {/* Register link */}
           <p className="text-center text-xs text-gray-500 font-medium mt-8">
             Don't have an account?{' '}
-            <Link to="/register" className="font-black hover:underline" style={{ color: '#16a34a' }}>
+            <Link to="/register" className="font-black hover:underline" style={{ color: '#2ebd3a' }}>
               Get started free →
             </Link>
           </p>

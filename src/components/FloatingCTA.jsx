@@ -53,7 +53,7 @@ export default function FloatingCTA() {
           height: '62px',
           borderRadius: '9999px',
           background:
-            'linear-gradient(135deg, #25D366 0%, #1ebe5d 100%)',
+            'linear-gradient(135deg, #2ebd3a 0%, #249e30 100%)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -100,7 +100,7 @@ export default function FloatingCTA() {
             height: '12px',
             borderRadius: '9999px',
             background: '#fff',
-            border: '2px solid #25D366',
+            border: '2px solid #2ebd3a',
           }}
         />
       </a>
@@ -177,7 +177,7 @@ export default function FloatingCTA() {
           bottom: '180px',
           right: '18px',
           zIndex: 45,
-          background: 'rgba(15,23,42,0.92)',
+          background: 'rgba(11, 37, 69,0.92)',
           color: '#fff',
           padding: '10px 14px',
           borderRadius: '9999px',

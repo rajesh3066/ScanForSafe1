@@ -34,7 +34,7 @@ export default function Navbar() {
 
         .sfs-topbar{
           height:3px;
-          background:linear-gradient(90deg,#064e3b,#16a34a,#4ade80,#bbf7d0,#4ade80,#16a34a,#064e3b);
+          background:linear-gradient(90deg,#0B2545,#2ebd3a,#4bd557,#e8f8eb,#4bd557,#2ebd3a,#0B2545);
           background-size:200% 100%;
           animation:topbar-slide 4s linear infinite;
         }
@@ -49,11 +49,11 @@ export default function Navbar() {
           -webkit-backdrop-filter:blur(20px) saturate(180%);
           border-bottom:1px solid rgba(226,232,240,0.9);
           transition:all .4s cubic-bezier(.4,0,.2,1);
-          box-shadow:0 2px 12px rgba(15,23,42,0.07);
+          box-shadow:0 2px 12px rgba(11, 37, 69,0.07);
         }
         .sfs-nav.scrolled .sfs-bar{
           height:72px;
-          box-shadow:0 6px 28px rgba(15,23,42,0.10);
+          box-shadow:0 6px 28px rgba(11, 37, 69,0.10);
         }
 
         /* ══════════════════════════════
@@ -79,7 +79,7 @@ export default function Navbar() {
           position:absolute;
           inset:-5px;
           border-radius:50%;
-          border:2px dashed rgba(22,163,74,0.4);
+          border:2px dashed rgba(46, 189, 58,0.4);
           animation:badge-spin 10s linear infinite;
         }
         /* Solid inner glow ring */
@@ -88,10 +88,10 @@ export default function Navbar() {
           position:absolute;
           inset:-2px;
           border-radius:50%;
-          border:2px solid rgba(22,163,74,0.25);
+          border:2px solid rgba(46, 189, 58,0.25);
           box-shadow:
-            0 0 0 4px rgba(22,163,74,0.07),
-            0 6px 24px rgba(22,163,74,0.22);
+            0 0 0 4px rgba(46, 189, 58,0.07),
+            0 6px 24px rgba(46, 189, 58,0.22);
         }
 
         @keyframes badge-spin{
@@ -104,21 +104,21 @@ export default function Navbar() {
           width:100%;height:100%;
           border-radius:50%;
           overflow:hidden;
-          background:linear-gradient(135deg,#f0fdf4,#dcfce7);
-          border:2.5px solid rgba(22,163,74,0.45);
-          box-shadow:inset 0 2px 8px rgba(22,163,74,0.15);
+          background:linear-gradient(135deg,#f8fafc,#e8f8eb);
+          border:2.5px solid rgba(46, 189, 58,0.45);
+          box-shadow:inset 0 2px 8px rgba(46, 189, 58,0.15);
           position:relative;
           z-index:1;
           transition:all .4s ease;
         }
         .sfs-logo:hover .sfs-logo-img-wrap{
-          border-color:rgba(22,163,74,0.75);
+          border-color:rgba(46, 189, 58,0.75);
           box-shadow:
-            inset 0 2px 8px rgba(22,163,74,0.2),
-            0 0 20px rgba(22,163,74,0.25);
+            inset 0 2px 8px rgba(46, 189, 58,0.2),
+            0 0 20px rgba(46, 189, 58,0.25);
         }
         .sfs-logo:hover .sfs-logo-badge::before{
-          border-color:rgba(22,163,74,0.7);
+          border-color:rgba(46, 189, 58,0.7);
           animation-duration:4s;
         }
 
@@ -141,11 +141,11 @@ export default function Navbar() {
           white-space:nowrap;line-height:1.15;
         }
         .sfs-logo-name .brand{
-          background:linear-gradient(135deg,#16a34a,#059669);
+          background:linear-gradient(135deg,#2ebd3a,#059669);
           -webkit-background-clip:text;-webkit-text-fill-color:transparent;
           background-clip:text;
         }
-        .sfs-logo-name .company{color:#0f172a;}
+        .sfs-logo-name .company{color:#0B2545;}
 
         /* Tagline row */
         .sfs-logo-tag{
@@ -153,17 +153,17 @@ export default function Navbar() {
         }
         .sfs-logo-tag-line{
           flex:1;height:1.5px;
-          background:linear-gradient(90deg,#16a34a,#4ade80,transparent);
+          background:linear-gradient(90deg,#2ebd3a,#4bd557,transparent);
           border-radius:2px;
           max-width:28px;
         }
         .sfs-logo-tag-line.right{
-          background:linear-gradient(270deg,#16a34a,#4ade80,transparent);
+          background:linear-gradient(270deg,#2ebd3a,#4bd557,transparent);
         }
         .sfs-logo-tagtext{
           font-size:9px;font-weight:900;
           letter-spacing:.28em;text-transform:uppercase;
-          background:linear-gradient(90deg,#16a34a,#059669);
+          background:linear-gradient(90deg,#2ebd3a,#059669);
           -webkit-background-clip:text;-webkit-text-fill-color:transparent;
           background-clip:text;
           white-space:nowrap;
@@ -180,17 +180,17 @@ export default function Navbar() {
           font-family:Inter,system-ui,sans-serif;
           transition:all .22s ease;
         }
-        .sfs-link:hover{color:#16a34a;background:rgba(220,252,231,.75);}
+        .sfs-link:hover{color:#2ebd3a;background:rgba(232, 248, 235,.75);}
         .sfs-link.active{
-          color:#15803d;
-          background:linear-gradient(135deg,rgba(22,163,74,.13),rgba(187,247,208,.5));
-          box-shadow:inset 0 0 0 1px rgba(22,163,74,.12);
+          color:#0B2545;
+          background:linear-gradient(135deg,rgba(46, 189, 58,.13),rgba(232, 248, 235,.5));
+          box-shadow:inset 0 0 0 1px rgba(46, 189, 58,.12);
         }
         .sfs-link.active::after{
           content:"";position:absolute;
           left:15px;right:15px;bottom:6px;
           height:2px;border-radius:999px;
-          background:linear-gradient(90deg,#16a34a,#4ade80);
+          background:linear-gradient(90deg,#2ebd3a,#4bd557);
         }
 
         /* ══ ACTIONS ══ */
@@ -198,34 +198,34 @@ export default function Navbar() {
         .sfs-login{
           height:42px;display:flex;align-items:center;justify-content:center;
           padding:0 22px;border-radius:12px;text-decoration:none;
-          font-size:13.5px;font-weight:700;color:#15803d;
-          border:1.5px solid rgba(22,163,74,.25);background:rgba(255,255,255,.9);
+          font-size:13.5px;font-weight:700;color:#0B2545;
+          border:1.5px solid rgba(46, 189, 58,.25);background:rgba(255,255,255,.9);
           transition:all .22s ease;letter-spacing:-.01em;
         }
         .sfs-login:hover{
           background:#fff;transform:translateY(-1px);
-          box-shadow:0 8px 20px rgba(22,163,74,.12);
-          border-color:rgba(22,163,74,.45);
+          box-shadow:0 8px 20px rgba(46, 189, 58,.12);
+          border-color:rgba(46, 189, 58,.45);
         }
 
         .sfs-prereg{
           height:46px;display:flex;align-items:center;justify-content:center;gap:8px;
           padding:0 24px;border-radius:999px;
-          background:linear-gradient(135deg,#16a34a 0%,#064e3b 100%);
+          background:linear-gradient(135deg,#2ebd3a 0%,#0B2545 100%);
           color:#fff;border:none;cursor:pointer;
           font-size:13.5px;font-weight:800;
           font-family:Inter,system-ui,sans-serif;
           letter-spacing:-.01em;
-          box-shadow:0 10px 28px rgba(22,163,74,.30),inset 0 1px 0 rgba(255,255,255,.15);
+          box-shadow:0 10px 28px rgba(46, 189, 58,.30),inset 0 1px 0 rgba(255,255,255,.15);
           transition:all .25s ease;white-space:nowrap;
         }
         .sfs-prereg:hover{
           transform:translateY(-2px);
-          box-shadow:0 16px 36px rgba(22,163,74,.38),inset 0 1px 0 rgba(255,255,255,.15);
+          box-shadow:0 16px 36px rgba(46, 189, 58,.38),inset 0 1px 0 rgba(255,255,255,.15);
         }
         .prereg-dot{
           width:7px;height:7px;border-radius:50%;
-          background:#4ade80;flex-shrink:0;
+          background:#4bd557;flex-shrink:0;
           animation:dot-pulse 1.5s ease-in-out infinite;
         }
         @keyframes dot-pulse{
@@ -238,13 +238,13 @@ export default function Navbar() {
           display:none;width:42px;height:42px;border:none;
           border-radius:12px;
           background:rgba(240,253,244,.9);
-          border:1px solid rgba(22,163,74,.15);
-          cursor:pointer;font-size:20px;color:#15803d;
+          border:1px solid rgba(46, 189, 58,.15);
+          cursor:pointer;font-size:20px;color:#0B2545;
         }
 
         /* ══ MOBILE MENU ══ */
         .sfs-mobile-overlay{
-          position:fixed;inset:0;background:rgba(15,23,42,.5);
+          position:fixed;inset:0;background:rgba(11, 37, 69,.5);
           backdrop-filter:blur(8px);opacity:0;pointer-events:none;
           transition:all .3s ease;z-index:9998;
         }
@@ -255,7 +255,7 @@ export default function Navbar() {
           background:rgba(255,255,255,.97);backdrop-filter:blur(30px);
           padding:90px 22px 30px;display:flex;flex-direction:column;gap:10px;
           transform:translateX(100%);transition:all .35s ease;
-          box-shadow:-12px 0 48px rgba(15,23,42,.15);
+          box-shadow:-12px 0 48px rgba(11, 37, 69,.15);
         }
         .sfs-mobile-overlay.open .sfs-mobile-drawer{transform:translateX(0);}
         .sfs-mobile-link{
@@ -263,14 +263,14 @@ export default function Navbar() {
           color:#334155;font-size:15px;font-weight:700;transition:all .18s ease;
         }
         .sfs-mobile-link:hover,.sfs-mobile-link.active{
-          background:rgba(220,252,231,.8);color:#15803d;
+          background:rgba(232, 248, 235,.8);color:#0B2545;
         }
         .sfs-mobile-actions{margin-top:18px;display:flex;flex-direction:column;gap:12px;}
 
         /* ══ PRE-REG MODAL ══ */
         .prereg-overlay{
           position:fixed;inset:0;
-          background:rgba(15,23,42,.6);
+          background:rgba(11, 37, 69,.6);
           backdrop-filter:blur(12px);
           display:flex;align-items:center;justify-content:center;
           z-index:99999;padding:20px;
@@ -282,7 +282,7 @@ export default function Navbar() {
           background:#fff;border-radius:24px;
           width:100%;max-width:440px;
           padding:40px 36px 36px;
-          box-shadow:0 40px 80px rgba(15,23,42,.25);
+          box-shadow:0 40px 80px rgba(11, 37, 69,.25);
           transform:translateY(24px) scale(.96);
           transition:transform .35s ease;
           position:relative;
@@ -369,7 +369,7 @@ export default function Navbar() {
         <div className="sfs-mobile-drawer" onClick={(e) => e.stopPropagation()}>
           <button
             onClick={() => setMobileOpen(false)}
-            style={{position:"absolute",top:"18px",right:"18px",width:"38px",height:"38px",border:"none",borderRadius:"10px",background:"rgba(240,253,244,0.9)",cursor:"pointer",fontSize:"16px",color:"#15803d"}}
+            style={{position:"absolute",top:"18px",right:"18px",width:"38px",height:"38px",border:"none",borderRadius:"10px",background:"rgba(240,253,244,0.9)",cursor:"pointer",fontSize:"16px",color:"#0B2545"}}
           >✕</button>
           {navLinks.map((item) => (
             <Link

@@ -44,11 +44,11 @@ import {
 ───────────────────────────────────────── */
 const THEMES = {
   green: {
-    accent: "#16a34a",
-    gradient: "linear-gradient(135deg, #16a34a, #15803d)",
-    soft: "#f0fdf4",
+    accent: "#2ebd3a",
+    gradient: "linear-gradient(135deg, #2ebd3a, #0B2545)",
+    soft: "#f8fafc",
     border: "#cbd5e1",
-    active: "#16a34a",
+    active: "#2ebd3a",
   },
   orange: {
     accent: "#ea580c",
@@ -211,7 +211,7 @@ const PRODUCTS = [
    TRUST SECTION DATA
 ───────────────────────────────────────── */
 const TRUST = [
-  { icon: ShieldCheck, title: "Secure Checkout", sub: "100% Safe & Encrypted", color: "#16a34a" },
+  { icon: ShieldCheck, title: "Secure Checkout", sub: "100% Safe & Encrypted", color: "#2ebd3a" },
   { icon: Truck, title: "Free Shipping", sub: "Pan India Delivery", color: "#2563eb" },
   { icon: RefreshCw, title: "30-Day Returns", sub: "Easy Refund Policy", color: "#7c3aed" },
   { icon: Headphones, title: "24/7 Support", sub: "Always Here To Help", color: "#ea580c" },
@@ -292,7 +292,7 @@ function ProductCard({ product }) {
           {/* RATING & REVIEWS */}
           <div style={{ display: "flex", alignItems: "center", gap: 4, fontSize: 11, fontWeight: 700 }}>
             <Star size={12} fill="#f59e0b" color="#f59e0b" />
-            <span style={{ color: "#111827" }}>{product.rating}</span>
+            <span style={{ color: "#0B2545" }}>{product.rating}</span>
             <span style={{ color: "#9ca3af", fontWeight: 400 }}>
               | {product.reviews.toLocaleString()} reviews
             </span>
@@ -300,7 +300,7 @@ function ProductCard({ product }) {
         </div>
 
         {/* HEADINGS */}
-        <h3 style={{ fontSize: 18, fontWeight: 800, color: "#111827", margin: "0 0 2px 0" }}>
+        <h3 style={{ fontSize: 18, fontWeight: 800, color: "#0B2545", margin: "0 0 2px 0" }}>
           {product.title}
         </h3>
         <p style={{ color: t.accent, fontWeight: 700, fontSize: 12, margin: "0 0 12px 0" }}>
@@ -378,7 +378,7 @@ function ProductCard({ product }) {
             >
               <Minus size={12} />
             </button>
-            <div style={{ width: 28, textAlign: "center", fontWeight: 700, fontSize: 13, color: "#111827" }}>
+            <div style={{ width: 28, textAlign: "center", fontWeight: 700, fontSize: 13, color: "#0B2545" }}>
               {qty}
             </div>
             <button
@@ -458,21 +458,21 @@ export default function Products() {
               alignItems: "center",
               gap: 6,
               background: "#fff",
-              border: "1px solid #dcfce7",
+              border: "1px solid #e8f8eb",
               borderRadius: 30,
               padding: "6px 16px",
               marginBottom: 16,
               boxShadow: "0 4px 12px rgba(0,0,0,0.03)",
             }}
           >
-            <Award size={14} color="#16a34a" />
-            <span style={{ fontWeight: 800, fontSize: 11, color: "#15803d", letterSpacing: "0.5px" }}>
+            <Award size={14} color="#2ebd3a" />
+            <span style={{ fontWeight: 800, fontSize: 11, color: "#0B2545", letterSpacing: "0.5px" }}>
               OUR PRODUCTS
             </span>
           </div>
 
-          <h2 style={{ fontSize: 44, lineHeight: 1.1, fontWeight: 900, marginBottom: 12, color: "#111827", letterSpacing: "-1px" }}>
-            Choose Your <span style={{ color: "#16a34a" }}>Protection Plan</span>
+          <h2 style={{ fontSize: 44, lineHeight: 1.1, fontWeight: 900, marginBottom: 12, color: "#0B2545", letterSpacing: "-1px" }}>
+            Choose Your <span style={{ color: "#2ebd3a" }}>Protection Plan</span>
           </h2>
 
           <p style={{ maxWidth: 640, margin: "0 auto", color: "#4b5563", lineHeight: 1.6, fontSize: 15 }}>
@@ -524,7 +524,7 @@ export default function Products() {
                 <Icon size={20} color={color} />
               </div>
               <div>
-                <div style={{ fontWeight: 800, fontSize: 14, color: "#111827" }}>{title}</div>
+                <div style={{ fontWeight: 800, fontSize: 14, color: "#0B2545" }}>{title}</div>
                 <div style={{ color: "#6b7280", fontSize: 12 }}>{sub}</div>
               </div>
             </div>

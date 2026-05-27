@@ -2,7 +2,7 @@ import { Wifi, Smartphone, ShieldCheck, Zap, QrCode, Bell } from 'lucide-react'
 
 export default function NFCSection() {
   return (
-    <section style={{ background: 'linear-gradient(135deg,#064e3b 0%,#166534 50%,#14532d 100%)', padding: '90px 0', overflow: 'hidden', position: 'relative' }}>
+    <section style={{ background: 'linear-gradient(135deg,#0B2545 0%,#2ebd3a 50%,#081c35 100%)', padding: '90px 0', overflow: 'hidden', position: 'relative' }}>
       {/* dots grid bg */}
       <div style={{
         position: 'absolute', inset: 0, opacity: 0.07,
@@ -21,7 +21,7 @@ export default function NFCSection() {
               {[1,2,3].map(i => (
                 <div key={i} style={{
                   position: 'absolute', inset: 0, borderRadius: '50%',
-                  border: '1.5px solid rgba(220,252,231,0.3)',
+                  border: '1.5px solid rgba(232, 248, 235,0.3)',
                   animation: `nfcPulse ${1.6 + i*0.5}s ease-out ${i*0.4}s infinite`,
                 }} />
               ))}
@@ -32,26 +32,26 @@ export default function NFCSection() {
                 backdropFilter: 'blur(12px)', borderRadius: '50%',
                 border: '1.5px solid rgba(255,255,255,0.2)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                boxShadow: '0 0 60px rgba(220,252,231,0.2)',
+                boxShadow: '0 0 60px rgba(232, 248, 235,0.2)',
               }}>
                 <div style={{ textAlign: 'center' }}>
-                  <Wifi size={52} color="#dcfce7" strokeWidth={1.5} />
-                  <div style={{ color: '#dcfce7', fontWeight: 800, fontSize: 14, marginTop: 8 }}>NFC Ready</div>
+                  <Wifi size={52} color="#e8f8eb" strokeWidth={1.5} />
+                  <div style={{ color: '#e8f8eb', fontWeight: 800, fontSize: 14, marginTop: 8 }}>NFC Ready</div>
                 </div>
               </div>
 
               {/* floating chips */}
               {[
-                { top: '5%', left: '50%', label: 'Tap to Scan', icon: <Smartphone size={16} color="#166534" /> },
-                { top: '50%', left: '5%', label: 'Instant Alert', icon: <Bell size={16} color="#166534" /> },
-                { bottom: '8%', right: '10%', label: 'No App Needed', icon: <Zap size={16} color="#166534" /> },
+                { top: '5%', left: '50%', label: 'Tap to Scan', icon: <Smartphone size={16} color="#2ebd3a" /> },
+                { top: '50%', left: '5%', label: 'Instant Alert', icon: <Bell size={16} color="#2ebd3a" /> },
+                { bottom: '8%', right: '10%', label: 'No App Needed', icon: <Zap size={16} color="#2ebd3a" /> },
               ].map(({ top, left, bottom, right, label, icon }) => (
                 <div key={label} style={{
                   position: 'absolute', top, left, bottom, right,
                   transform: 'translate(-50%,-50%)',
-                  background: '#dcfce7', borderRadius: 12, padding: '8px 14px',
+                  background: '#e8f8eb', borderRadius: 12, padding: '8px 14px',
                   display: 'flex', alignItems: 'center', gap: 8,
-                  fontSize: 12, fontWeight: 700, color: '#166534',
+                  fontSize: 12, fontWeight: 700, color: '#2ebd3a',
                   boxShadow: '0 8px 24px rgba(6,78,59,0.3)',
                   whiteSpace: 'nowrap',
                 }}>
@@ -66,17 +66,17 @@ export default function NFCSection() {
             <div style={{
               display: 'inline-flex', alignItems: 'center', gap: 8,
               padding: '8px 18px', borderRadius: 100,
-              background: 'rgba(220,252,231,0.15)', border: '1px solid rgba(220,252,231,0.3)', marginBottom: 20,
+              background: 'rgba(232, 248, 235,0.15)', border: '1px solid rgba(232, 248, 235,0.3)', marginBottom: 20,
             }}>
-              <Wifi size={14} color="#dcfce7" />
-              <span style={{ fontSize: 13, fontWeight: 700, color: '#dcfce7' }}>🔥 New Feature</span>
+              <Wifi size={14} color="#e8f8eb" />
+              <span style={{ fontSize: 13, fontWeight: 700, color: '#e8f8eb' }}>🔥 New Feature</span>
             </div>
 
-            <h2 style={{ fontSize: 'clamp(28px,3.5vw,42px)', fontWeight: 900, color: '#f0fdf4', margin: '0 0 16px', lineHeight: 1.1 }}>
+            <h2 style={{ fontSize: 'clamp(28px,3.5vw,42px)', fontWeight: 900, color: '#f8fafc', margin: '0 0 16px', lineHeight: 1.1 }}>
               NFC Integration —
-              <span style={{ color: '#86efac' }}> Just Tap & Go</span>
+              <span style={{ color: '#7ded88' }}> Just Tap & Go</span>
             </h2>
-            <p style={{ color: 'rgba(220,252,231,0.85)', fontSize: 16, lineHeight: 1.7, marginBottom: 32 }}>
+            <p style={{ color: 'rgba(232, 248, 235,0.85)', fontSize: 16, lineHeight: 1.7, marginBottom: 32 }}>
               Every ScanForSafe tag now includes an NFC chip. No QR scan needed — just tap any NFC phone and the owner's details appear instantly. Faster than ever.
             </p>
 
@@ -91,24 +91,24 @@ export default function NFCSection() {
                   background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(8px)',
                   borderRadius: 16, padding: '14px 16px', border: '1px solid rgba(255,255,255,0.1)',
                 }}>
-                  <Icon size={20} color="#86efac" style={{ marginBottom: 8 }} />
-                  <div style={{ color: '#f0fdf4', fontWeight: 700, fontSize: 14, marginBottom: 4 }}>{title}</div>
-                  <div style={{ color: 'rgba(220,252,231,0.65)', fontSize: 12 }}>{sub}</div>
+                  <Icon size={20} color="#7ded88" style={{ marginBottom: 8 }} />
+                  <div style={{ color: '#f8fafc', fontWeight: 700, fontSize: 14, marginBottom: 4 }}>{title}</div>
+                  <div style={{ color: 'rgba(232, 248, 235,0.65)', fontSize: 12 }}>{sub}</div>
                 </div>
               ))}
             </div>
 
             <div style={{
-              background: 'rgba(220,252,231,0.1)', border: '1px solid rgba(220,252,231,0.2)',
+              background: 'rgba(232, 248, 235,0.1)', border: '1px solid rgba(232, 248, 235,0.2)',
               borderRadius: 16, padding: '16px 20px',
               display: 'flex', alignItems: 'center', gap: 12,
             }}>
-              <div style={{ width: 44, height: 44, borderRadius: 12, background: '#dcfce7', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <Wifi size={22} color="#166534" />
+              <div style={{ width: 44, height: 44, borderRadius: 12, background: '#e8f8eb', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <Wifi size={22} color="#2ebd3a" />
               </div>
               <div>
-                <div style={{ color: '#f0fdf4', fontWeight: 700, fontSize: 14 }}>Available on all new tags</div>
-                <div style={{ color: 'rgba(220,252,231,0.7)', fontSize: 12, marginTop: 3 }}>
+                <div style={{ color: '#f8fafc', fontWeight: 700, fontSize: 14 }}>Available on all new tags</div>
+                <div style={{ color: 'rgba(232, 248, 235,0.7)', fontSize: 12, marginTop: 3 }}>
                   Order a new ScanForSafe tag to get NFC + QR dual protection
                 </div>
               </div>
