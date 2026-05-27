@@ -12,7 +12,7 @@ const CONTACT_INFO = [
     border: '#bfdbfe',
     emoji: '📞',
     desc: 'Mon–Sat, 9am to 7pm',
-  },
+  }    ,   
   {
     icon: MessageCircle,
     label: 'WhatsApp',
